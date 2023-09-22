@@ -14,7 +14,6 @@ public class GWD {
     public static WebDriver getDriver() {
 
         if (driver == null) {
-
             Logger logger = Logger.getLogger("");
             logger.setLevel(Level.SEVERE);
 
@@ -22,7 +21,6 @@ public class GWD {
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         }
-
         return driver;
     }
 
@@ -37,7 +35,6 @@ public class GWD {
         if (driver != null) {
             driver.quit();
             driver = null;
-
         }
     }
 }
