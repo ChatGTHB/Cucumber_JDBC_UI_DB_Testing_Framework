@@ -5,10 +5,7 @@ import pages.DialogContent;
 import utilities.GWD;
 
 
-import java.time.Duration;
-
 public class _01_LoginSteps {
-
     DialogContent dc = new DialogContent();
 
     @Given("Navigate to Campus")
