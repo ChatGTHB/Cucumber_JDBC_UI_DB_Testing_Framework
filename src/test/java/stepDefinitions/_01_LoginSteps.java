@@ -15,12 +15,13 @@ public class _01_LoginSteps {
 
     @When("Enter valid username and password and click login button")
     public void enterValidUsernameAndPassswordAndClickLoginButton() {
-        dc.sendKeys(dc.username, "turkeyts");
-        dc.sendKeys(dc.password, "TechnoStudy123");
-        dc.click(dc.loginButton);
+        dc.mySendKeys(dc.username, "turkeyts");
+        dc.mySendKeys(dc.password, "TechnoStudy123");
+        dc.myClick(dc.loginButton);
     }
 
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
+        dc.verifyContainsText(dc.textTechnoStudy, "Techno Study");
     }
 }
