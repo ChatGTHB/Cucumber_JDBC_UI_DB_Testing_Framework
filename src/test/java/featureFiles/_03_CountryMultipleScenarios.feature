@@ -11,6 +11,7 @@ Feature: Country Multi Scenario
     Then  Success message should be displayed
 
   Scenario: Create a country 2
-    When  Create a country name as "Krm0001" code as "U001"
+    When  Create a country that name as "Krm1001" code as "U1001"
     Then  Success message should be displayed
+ 
 
