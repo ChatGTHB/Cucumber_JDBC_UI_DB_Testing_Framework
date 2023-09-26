@@ -13,7 +13,7 @@ public class _04_CitizenshipSteps {
     public void navigateToCitizenship() {
         ln.myClick(ln.setup);
         ln.myClick(ln.parameters);
-        ln.myClick(ln.citizenShip);
+        ln.myClick(ln.citizenship);
     }
 
     @When("Create a Citizenship")
@@ -25,5 +25,19 @@ public class _04_CitizenshipSteps {
         dc.mySendKeys(dc.nameInput, citizenshipName);
         dc.mySendKeys(dc.shortName, citizenshipShortCode);
         dc.myClick(dc.saveButton);
+    }
+
+    @When("Create a Citizenship that name as {string} short name as {string}")
+    public void createACitizenshipThatNameAsShortNameAs(String name, String shortName) {
+        dc.myClick(dc.addButton);
+        dc.mySendKeys(dc.nameInput, name);
+        dc.mySendKeys(dc.shortName, shortName);
+        dc.myClick(dc.saveButton);
+
+    }
+
+    @Then("Already exist message should be displayed")
+    public void alreadyExistMessageShouldBeDisplayed() {
+        dc.verifyContainsText(dc.alreadyExist, "already");
     }
 }
