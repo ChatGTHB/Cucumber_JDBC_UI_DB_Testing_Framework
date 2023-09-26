@@ -33,8 +33,8 @@ public class _02_CountrySteps {
         dc.verifyContainsText(dc.successMessage, "success");
     }
 
-    @When("Create a country name as {string} code as {string}")
-    public void createACountryNameAsCodeAs(String name, String code) {
+    @When("Create a country that name as {string} code as {string}")
+    public void createACountryThatNameAsCodeAs(String name, String code) {
         dc.myClick(dc.addButton);
         dc.mySendKeys(dc.nameInput, name);
         dc.mySendKeys(dc.codeInput, code);
