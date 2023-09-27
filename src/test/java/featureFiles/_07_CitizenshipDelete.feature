@@ -17,9 +17,9 @@ Feature: Citizenship Functionality
     Then Success message should be displayed
 
     Examples:
-      | name     | shortname |
-      | krm23s1 | sh56is1   |
-      | krm23s2 | sh56is2   |
-      | krm23s3 | sh56is3   |
-      | krm23s4 | sh56is4   |
-      | krm23s5 | sh56is5   |
+      | name      | shortname |
+      | krm203sd1 | sh56is1   |
+      | krm203sd2 | sh56is2   |
+      | krm203sd3 | sh56is3   |
+      | krm203sd4 | sh56is4   |
+      | krm203sd5 | sh56is5   |
