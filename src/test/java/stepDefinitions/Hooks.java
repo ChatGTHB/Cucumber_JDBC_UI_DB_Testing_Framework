@@ -8,12 +8,12 @@ public class Hooks {
 
     @Before
     public void before() {
-        System.out.println("The scenario has begun.");
+        System.out.println("The scenario started.");
     }
 
     @After
     public void after() {
-        System.out.println("The scenario is finished.");
+        System.out.println("The scenario finished.");
         GWD.quitDriver();
     }
 }
