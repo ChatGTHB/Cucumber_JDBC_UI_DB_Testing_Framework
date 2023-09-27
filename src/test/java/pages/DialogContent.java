@@ -81,21 +81,11 @@ public class DialogContent extends Parent{
 
     public void deleteItem(String searchText){
         mySendKeys(searchInput, searchText);
-        myClick(searchButton); // fuse bar ı çocukları ortaya çıkıyor
-
-        //beklet
-        //1. StaleElemetn hatası verdi : erken buldum tez kaybettim
-        //dc.wait.until(ExpectedConditions.elementToBeClickable(dc.searchButton));
-        //wait.until(ExpectedConditions.stalenessOf(dc.deleteImageBtn)); //olabilir ama herzaman çözmez
-
-        //2.yöntem sayfanın kendi waitini , loding ini yakalayalım. (en sağlam yöntem)
-        //fuse-progress-bar/*    -> fuse-progress-bar ın çocukları
-        // bu çocukların 0 olana bekle
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
-
+        myClick(searchButton);
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+//        Alternative Way:
+//        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
         myClick(deleteImageButton);
         myClick(deleteDialogButton);
-
-        // silme ıslemı dıalogların ortak noktası olması sebebıyle buraya aldık. Silme islemi yapacagımız her seferınde tekrar tekrar kod yazmayalım dırekt cagıralım dıye aldık.
     }
 }
