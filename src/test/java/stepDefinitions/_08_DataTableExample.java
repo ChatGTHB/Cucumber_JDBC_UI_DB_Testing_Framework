@@ -21,7 +21,8 @@ public class _08_DataTableExample {
     public void writeUsernameAsDataTable(DataTable users) {
         List<String> listUsers = users.asList(String.class); // list
 
-        for (String user : listUsers) {
+        for (int i = 0; i < listUsers.size(); i++) {
+            String user = listUsers.get(i);
             System.out.println("User = " + user);
         }
     }
@@ -30,7 +31,8 @@ public class _08_DataTableExample {
     public void writeUsernameAndPasswordAsDataTable(DataTable usersAndPasswords) {
         List<List<String>> usersAndPasswordsLists = usersAndPasswords.asLists(String.class);
 
-        for (List<String> usersAndPasswordsList : usersAndPasswordsLists) {
+        for (int i = 0; i < usersAndPasswordsLists.size(); i++) {
+            List<String> usersAndPasswordsList = usersAndPasswordsLists.get(i);
             System.out.printf("User = %-15s <--> Password = %s%n",
                     usersAndPasswordsList.get(0),  // username
                     usersAndPasswordsList.get(1)); // password
