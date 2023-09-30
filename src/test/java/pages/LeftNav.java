@@ -30,8 +30,8 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
     private WebElement entranceExamsTwo;
 
-    public WebElement getWebElement(String strElement) {
-        switch (strElement) {
+    public WebElement getWebElement(String stringElement) {
+        switch (stringElement) {
             case "setup":
                 return this.setup;
             case "parameters":
