@@ -35,13 +35,13 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//div[contains(text(),'already exists')]")
     public WebElement alreadyExist;
     @FindBy(xpath="//mat-form-field//input[@data-placeholder='Name']")
-    public WebElement searchInput;
+    private WebElement searchInput;
     @FindBy(xpath="//ms-search-button//button")
-    public WebElement searchButton;
+    private WebElement searchButton;
     @FindBy(xpath="(//ms-delete-button//button)[1]")
-    public WebElement deleteImageButton;
+    private WebElement deleteImageButton;
     @FindBy(xpath="//button[@type='submit']")
-    public WebElement deleteDialogButton;
+    private WebElement deleteDialogButton;
     @FindBy(xpath="//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
     private WebElement integrationCode;
     @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']/input")
@@ -74,10 +74,8 @@ public class DialogContent extends Parent{
             case "gradeLevel2": return this.gradeLevel2;
             case "searchAcademicPeriod": return this.searchAcademicPeriod;
         }
-
         return null;
     }
-
 
     public void deleteItem(String searchText){
         mySendKeys(searchInput, searchText);
