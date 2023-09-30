@@ -14,7 +14,7 @@ public class _01_LoginSteps {
     }
 
     @When("Enter valid username and password and click login button")
-    public void enterValidUsernameAndPassswordAndClickLoginButton() {
+    public void enterValidUsernameAndPasswordAndClickLoginButton() {
         dc.mySendKeys(dc.username, "turkeyts");
         dc.mySendKeys(dc.password, "TechnoStudy123");
         dc.myClick(dc.loginButton);
