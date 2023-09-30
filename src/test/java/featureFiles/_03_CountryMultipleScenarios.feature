@@ -6,12 +6,14 @@ Feature: Country Multi Scenario
     Then  User should login successfully
     And   Navigate to country
 
+  @Regression
   Scenario: Create a country
     When  Create a country
     Then  Success message should be displayed
 
+  @Regression
   Scenario: Create a country 2
-    When  Create a country that name as "Krm1001" code as "U1001"
+    When  Create a country that name as "Krm00001" code as "U1001"
     Then  Success message should be displayed
  
 
