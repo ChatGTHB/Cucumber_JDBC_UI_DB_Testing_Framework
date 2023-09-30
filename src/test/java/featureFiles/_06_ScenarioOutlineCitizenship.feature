@@ -14,9 +14,9 @@ Feature: Citizenship Functionality
     Then Already exist message should be displayed
 
     Examples:
-      | name     | shortname |
-      | krm23s1 | sh56is1   |
-      | krm23s2 | sh56is2   |
-      | krm23s3 | sh56is3   |
-      | krm23s4 | sh56is4   |
-      | krm23s5 | sh56is5   |
+      | name      | shortname |
+      | krm23s001 | sh56is1   |
+      | krm23s002 | sh56is2   |
+      | krm23s003 | sh56is3   |
+      | krm23s004 | sh56is4   |
+      | krm23s005 | sh56is5   |
