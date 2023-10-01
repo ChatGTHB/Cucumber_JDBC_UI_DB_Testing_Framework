@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -13,10 +14,13 @@ public class GWD {
 
     public static WebDriver getDriver() {
 
-        if (driver == null) {
-            Logger logger = Logger.getLogger("");
-            logger.setLevel(Level.SEVERE);
+        Locale.setDefault(new Locale("EN"));
+        System.setProperty("user.language", "EN");
 
+        Logger logger = Logger.getLogger("");
+        logger.setLevel(Level.SEVERE);
+
+        if (driver == null) {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
