@@ -7,8 +7,8 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@SmokeTest",
         features = {"src/test/java/featureFiles"},
         glue={"stepDefinitions"},
-        dryRun = false,
-        plugin= {"html:target/site/cucumber-pretty.html"}
+        plugin= {"html:target/site/cucumber-pretty.html"},
+        dryRun = false
 )
 public class _06_TestRunnerSmokeWithPlugin extends AbstractTestNGCucumberTests {
 }
