@@ -12,7 +12,6 @@ import org.testng.annotations.AfterClass;
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class _07_TestRunnerExtentReport extends AbstractTestNGCucumberTests {
-
     @AfterClass
     public static void writeExtentReport() {
         ExtentService.getInstance().setSystemInfo("Windows Username", System.getProperty("user.name"));
