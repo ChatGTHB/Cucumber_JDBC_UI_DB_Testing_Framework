@@ -18,7 +18,6 @@ public class _06_Question_01 {
          *  print below.
          */
 
-
         String path = "src/test/java/apachePOI/resource/MultiplicationTable.xlsx";
         FileInputStream fileInputStream = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fileInputStream);
