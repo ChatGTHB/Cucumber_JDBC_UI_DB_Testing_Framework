@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+
+    <test name="test1">
+
+        <parameter name="browserType" value="edge"></parameter>
+
+        <classes>
+            <class name="runners._08_TestRunnerParallel"></class>
+        </classes>
+
+    </test>
+
+    <test name="test2">
+
+        <parameter name="browserType" value="firefox"></parameter>
+
+        <classes>
+            <class name="runners._08_TestRunnerParallel"></class>
+        </classes>
+
+    </test>
+
+</suite>
