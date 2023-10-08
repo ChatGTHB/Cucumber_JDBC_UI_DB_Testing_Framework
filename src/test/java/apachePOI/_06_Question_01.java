@@ -9,24 +9,25 @@ import java.io.IOException;
 public class _06_Question_01 {
     public static void main(String[] args) throws IOException {
         /**
-         *  Çarpım tablosunun tümünü varolan boş bir excel dosyasına
+         *  Boş bir excel dosyasına çarpım tablosunu
          *  alt alta yazdırınız.
          *
          *  -------------------------------------------------------------------
          *
-         * Copy the entire multiplication tables into an existing blank excel file
-         * print below.
+         *  Copy the multiplication table into a blank excel file
+         *  print below.
          */
 
 
-        String path = "src/test/java/apachePOI/resource/WriteInTheExcel.xlsx";
+        String path = "src/test/java/apachePOI/resource/MultiplicationTable.xlsx";
         FileInputStream fileInputStream = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fileInputStream);
         Sheet sheet = workbook.getSheetAt(0);
 
-        int newRowIndex = 0;
+        int newRowIndex = 0; // sheet.getPhysicalNumberOfRows();
 
         for (int i = 1; i <= 10; i++) {
+
             for (int j = 1; j <= 10; j++) {
                 Row row = sheet.createRow(newRowIndex++);
 
@@ -41,9 +42,8 @@ public class _06_Question_01 {
 
         fileInputStream.close();
 
-        FileOutputStream fileOutputStream=new FileOutputStream(path);
+        FileOutputStream fileOutputStream = new FileOutputStream(path);
         workbook.write(fileOutputStream);
-
         workbook.close();
         fileOutputStream.close();
 
