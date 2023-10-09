@@ -2,8 +2,13 @@ package utilities;
 
 import io.cucumber.java.Scenario;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.*;
-import java.io.*;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ExcelUtility {
@@ -48,8 +53,8 @@ public class ExcelUtility {
             Cell cell = newRow.createCell(0);
             cell.setCellValue(scenario.getName());
 
-            Cell cell2 = newRow.createCell(1);
-            cell.setCellValue(scenario.getStatus().toString());
+            Cell cell2= newRow.createCell(1);
+            cell2.setCellValue(scenario.getStatus().toString());
 
             // Save
             try {
@@ -80,7 +85,7 @@ public class ExcelUtility {
             cell.setCellValue(scenario.getName());
 
             Cell cell2 = newRow.createCell(1);
-            cell.setCellValue(scenario.getStatus().toString());
+            cell2.setCellValue(scenario.getStatus().toString());
 
             try {
                 inputStream.close();
