@@ -13,9 +13,7 @@ package apachePOI;
  */
 
 import org.apache.poi.ss.usermodel.*;
-
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class _09_Question_03 {
@@ -23,7 +21,7 @@ public class _09_Question_03 {
     public static void main(String[] args) {
         String path = "src/test/java/ApachePOI/resource/ApacheExcel.xlsx";
         String sheetName = "testCitizen";
-        int numberOfColumns = 2;
+        int numberOfColumns = 4;
 
         ArrayList<ArrayList<String>> data = getData(path, sheetName, numberOfColumns);
         // System.out.println("data = " + data);
