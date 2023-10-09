@@ -1,5 +1,6 @@
 package utilities;
 
+import io.cucumber.java.Scenario;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.*;
 import java.io.*;
@@ -31,7 +32,7 @@ public class ExcelUtility {
         return table;
     }
 
-    public static void writeToExcel(String path, String data) {
+    public static void writeToExcel(String path, Scenario scenario) {
 
         File file = new File(path);
 
@@ -43,8 +44,12 @@ public class ExcelUtility {
 
             // Perform operations in memory
             Row newRow = sheet.createRow(0);
+
             Cell cell = newRow.createCell(0);
-            cell.setCellValue(data + " was created");
+            cell.setCellValue(scenario.getName());
+
+            Cell cell2 = newRow.createCell(1);
+            cell.setCellValue(scenario.getStatus().toString());
 
             // Save
             try {
@@ -70,8 +75,12 @@ public class ExcelUtility {
 
             int lastRowIndex = sheet.getPhysicalNumberOfRows();
             Row newRow = sheet.createRow(lastRowIndex);
-            Cell newCell = newRow.createCell(0);
-            newCell.setCellValue(data);
+
+            Cell cell = newRow.createCell(0);
+            cell.setCellValue(scenario.getName());
+
+            Cell cell2 = newRow.createCell(1);
+            cell.setCellValue(scenario.getStatus().toString());
 
             try {
                 inputStream.close();
