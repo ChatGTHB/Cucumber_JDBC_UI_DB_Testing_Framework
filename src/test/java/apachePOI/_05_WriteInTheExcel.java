@@ -14,14 +14,14 @@ public class _05_WriteInTheExcel {
         Workbook workbook = WorkbookFactory.create(fileInputStream);
         Sheet sheet = workbook.getSheetAt(0);
 
-        int lastRowIndex=sheet.getPhysicalNumberOfRows();
-        Row newRow=sheet.createRow(lastRowIndex);
-        Cell newCell=newRow.createCell(0);
+        int lastRowIndex = sheet.getPhysicalNumberOfRows();
+        Row newRow = sheet.createRow(lastRowIndex);
+        Cell newCell = newRow.createCell(0);
         newCell.setCellValue("Hello World");
 
         fileInputStream.close();
 
-        FileOutputStream fileOutputStream=new FileOutputStream(path);
+        FileOutputStream fileOutputStream = new FileOutputStream(path);
         workbook.write(fileOutputStream);
 
         workbook.close();
