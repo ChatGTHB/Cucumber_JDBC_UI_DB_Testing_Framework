@@ -14,81 +14,70 @@ import java.util.ArrayList;
 public class ExcelUtility {
 
 
-    public static ArrayList<ArrayList<String>> getData(String path, String sheetName, int sutunSayisi){
-        ArrayList<ArrayList<String>> tablo=new ArrayList<>();
+    public static ArrayList<ArrayList<String>> getData(String path, String sheetName, int numberOfColumns) {
+        ArrayList<ArrayList<String>> table = new ArrayList<>();
 
-        Sheet sheet=null;
+        Sheet sheet = null;
         try {
-            FileInputStream inputStream=new FileInputStream(path);
+            FileInputStream inputStream = new FileInputStream(path);
             Workbook workbook = WorkbookFactory.create(inputStream);
-            sheet=workbook.getSheet(sheetName);
-        } catch (IOException e) {
-            System.out.println("e = " + e.getMessage());;
+            sheet = workbook.getSheet(sheetName);
+        } catch (IOException exception) {
+            System.out.println("exception = " + exception.getMessage());
         }
 
-        for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {  //her bir satırı
+        for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {  // each line
+            ArrayList<String> row = new ArrayList<>();
 
-            ArrayList<String> satir=new ArrayList<>();
-            for (int j = 0; j < sutunSayisi; j++) {  // sutun sayısı kadar dolas
-                satir.add(sheet.getRow(i).getCell(j).toString());
+            for (int j = 0; j < numberOfColumns; j++) {  // circulate as many columns as possible
+                row.add(sheet.getRow(i).getCell(j).toString());
             }
-
-            tablo.add(satir);
+            table.add(row);
         }
-
-        return tablo;
+        return table;
     }
 
-    public static void writeToExcel(String path, Scenario senaryo) {
+    public static void writeToExcel(String path, String data) {
 
         File file = new File(path);
 
-        if (!file.exists()) // dosya yok ise, ilk kez ve 1 kez çalışır
+        if (!file.exists()) // If the file does not exist, it runs first time and 1 time
         {
-            //hafzada worbook oluştur, içinde hafızada sheet oluştur
+            // Create a workbook in memory, create a sheet in memory
             XSSFWorkbook workbook = new XSSFWorkbook();
-            XSSFSheet sheet = workbook.createSheet("Sayfa1");
+            XSSFSheet sheet = workbook.createSheet("Sheet1");
 
-            //hafızada işlemlerini yap
-            Row yeniSatir = sheet.createRow(0);
+            // Perform operations in memory
+            Row newRow = sheet.createRow(0);
+            Cell cell = newRow.createCell(0);
+            cell.setCellValue(data + " was created");
 
-            Cell hucre = yeniSatir.createCell(0);
-            hucre.setCellValue(senaryo.getName());
-
-            Cell hucre2 = yeniSatir.createCell(1);
-            hucre2.setCellValue(senaryo.getStatus().toString());
-
-            //kaydet
+            // Save
             try {
                 FileOutputStream outputStream = new FileOutputStream(path);
                 workbook.write(outputStream);
                 workbook.close();
                 outputStream.close();
-            } catch (Exception ex) {
-                System.out.println("ex.getMessage() = " + ex.getMessage());
+            } catch (Exception exception) {
+                System.out.println("exception.getMessage() = " + exception.getMessage());
             }
         } else {
-
-            FileInputStream inputStream=null;
-            Workbook workbook=null;
-            Sheet sheet=null;
+            FileInputStream inputStream = null;
+            Workbook workbook = null;
+            Sheet sheet = null;
 
             try {
                 inputStream = new FileInputStream(path);
                 workbook = WorkbookFactory.create(inputStream);
                 sheet = workbook.getSheetAt(0);
-            } catch (Exception ex) {
-                System.out.println("ex.getMessage() = " + ex.getMessage());
+            } catch (Exception exception) {
+                System.out.println("exception.getMessage() = " + exception.getMessage());
             }
 
-            int sonSatirIndex = sheet.getPhysicalNumberOfRows();
-            Row yeniSatir = sheet.createRow(sonSatirIndex);
-
-            Cell hucre = yeniSatir.createCell(0);
-            hucre.setCellValue(senaryo.getName());
-
-            Cell hucre2 = yeniSatir.createCell(1);
-            hucre2.setCellValue(senaryo.getStatus().toString());
+            int lastRowIndex = sheet.getPhysicalNumberOfRows();
+            Row newRow = sheet.createRow(lastRowIndex);
+            Cell newCell = newRow.createCell(0);
+            newCell.setCellValue(data);
 
             try {
                 inputStream.close();
@@ -96,12 +85,9 @@ public class ExcelUtility {
                 workbook.write(outputStream);
                 workbook.close();
                 outputStream.close();
-            } catch (Exception ex) {
-                System.out.println("ex.getMessage() = " + ex.getMessage());
+            } catch (Exception exception) {
+                System.out.println("exception.getMessage() = " + exception.getMessage());
             }
         }
-
     }
-
-
 }
