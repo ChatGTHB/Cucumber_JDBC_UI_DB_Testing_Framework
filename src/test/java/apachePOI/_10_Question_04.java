@@ -33,11 +33,10 @@ public class _10_Question_04 {
     }
 
     public static void writeToExcel(String path, String data) {
-
         File file = new File(path);
 
-        if (!file.exists()) // If the file does not exist, it runs first time and 1 time
-        {
+        if (!file.exists()) { // If the file does not exist, it runs first time and 1 time
+
             // Create a workbook in memory, create a sheet in memory
             XSSFWorkbook workbook = new XSSFWorkbook();
             XSSFSheet sheet = workbook.createSheet("Sheet1");
