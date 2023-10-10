@@ -23,7 +23,7 @@ import java.io.*;
 
 public class _10_Question_04 {
     public static void main(String[] args) {
-        String path = "src/test/java/ApachePOI/resource/ScenarioResults.xlsx";
+        String path = "src/test/java/ApachePOI/resource/ScenarioResultsDemo.xlsx";
         String data = "Test passed";
 
         writeToExcel(path, data); // Excel will be created
@@ -39,7 +39,7 @@ public class _10_Question_04 {
 
             // Create a workbook in memory, create a sheet in memory
             XSSFWorkbook workbook = new XSSFWorkbook();
-            XSSFSheet sheet = workbook.createSheet("Sheet1");
+            XSSFSheet sheet = workbook.createSheet("Scenario Results");
 
             // Perform operations in memory
             Row newRow = sheet.createRow(0);
