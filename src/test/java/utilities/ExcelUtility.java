@@ -2,18 +2,12 @@ package utilities;
 
 import io.cucumber.java.Scenario;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.*;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ExcelUtility {
-
-
     public static ArrayList<ArrayList<String>> getData(String path, String sheetName, int numberOfColumns) {
         ArrayList<ArrayList<String>> table = new ArrayList<>();
 
@@ -53,7 +47,7 @@ public class ExcelUtility {
             Cell cell = newRow.createCell(0);
             cell.setCellValue(scenario.getName());
 
-            Cell cell2= newRow.createCell(1);
+            Cell cell2 = newRow.createCell(1);
             cell2.setCellValue(scenario.getStatus().toString());
 
             // Save
