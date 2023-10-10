@@ -13,6 +13,7 @@ package apachePOI;
  */
 
 import org.apache.poi.ss.usermodel.*;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -25,7 +26,6 @@ public class _09_Question_03 {
 
         ArrayList<ArrayList<String>> data = getData(path, sheetName, numberOfColumns);
         // System.out.println("data = " + data);
-
         for (int i = 0; i < data.size(); i++) {
             for (int j = 0; j < data.get(i).size(); j++) {
                 System.out.print(data.get(i).get(j) + " ");
