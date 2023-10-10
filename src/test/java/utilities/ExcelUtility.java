@@ -31,7 +31,7 @@ public class ExcelUtility {
         return table;
     }
 
-    public static void writeToExcel(String path, Scenario scenario) {
+    public static void writeToExcel(String path, Scenario scenario, String browserName) {
 
         File file = new File(path);
 
@@ -39,16 +39,19 @@ public class ExcelUtility {
         {
             // Create a workbook in memory, create a sheet in memory
             XSSFWorkbook workbook = new XSSFWorkbook();
-            XSSFSheet sheet = workbook.createSheet("Sheet1");
+            XSSFSheet sheet = workbook.createSheet("Scenario Results");
 
             // Perform operations in memory
-            Row newRow = sheet.createRow(0);
+            Row row = sheet.createRow(0);
 
-            Cell cell = newRow.createCell(0);
+            Cell cell = row.createCell(0);
             cell.setCellValue(scenario.getName());
 
-            Cell cell2 = newRow.createCell(1);
-            cell2.setCellValue(scenario.getStatus().toString());
+            cell = row.createCell(1);
+            cell.setCellValue(scenario.getStatus().toString());
+
+            cell = row.createCell(2);
+            cell.setCellValue(browserName);
 
             // Save
             try {
@@ -73,13 +76,16 @@ public class ExcelUtility {
             }
 
             int lastRowIndex = sheet.getPhysicalNumberOfRows();
-            Row newRow = sheet.createRow(lastRowIndex);
+            Row row = sheet.createRow(lastRowIndex);
 
-            Cell cell = newRow.createCell(0);
+            Cell cell = row.createCell(0);
             cell.setCellValue(scenario.getName());
 
-            Cell cell2 = newRow.createCell(1);
-            cell2.setCellValue(scenario.getStatus().toString());
+            cell = row.createCell(1);
+            cell.setCellValue(scenario.getStatus().toString());
+
+            cell = row.createCell(2);
+            cell.setCellValue(browserName);
 
             try {
                 inputStream.close();
