@@ -31,6 +31,4 @@ public class JDBCParent {
             System.out.println("exception.getMessage() = " + exception.getMessage());
         }
     }
-
-
 }
