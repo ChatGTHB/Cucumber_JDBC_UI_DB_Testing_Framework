@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0caf2c8-7ae1-4d22-a723-93b4435f5e29" name="Changes" comment="Added _06_Todo.java for JDBC operations">
+    <list default="true" id="b0caf2c8-7ae1-4d22-a723-93b4435f5e29" name="Changes" comment="Renamed _jdbc package">
+      <change afterPath="$PROJECT_DIR$/src/test/java/jdbc/_07_GetAllRowColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_01_Intro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_01_Intro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_02_Intro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_02_Intro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_03_NextPrevAbsRel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_03_NextPrevAbsRel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_04_Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_04_Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_05_FirstLastGetRowGetType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_05_FirstLastGetRowGetType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_06_Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_06_Todo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/DBUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/DBUtility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,14 +99,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695406436098</updated>
-    </task>
-    <task id="LOCAL-00094" summary="Added ParallelTest.xml">
-      <option name="closed" value="true" />
-      <created>1696796606423</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1696796606423</updated>
     </task>
     <task id="LOCAL-00095" summary="Added ExcelUtility.java">
       <option name="closed" value="true" />
@@ -483,7 +484,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698151229175</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="Renamed _jdbc package">
+      <option name="closed" value="true" />
+      <created>1698154414831</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1698154414831</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -498,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted _12_EntranceExamSenaryoOutline.feature" />
     <MESSAGE value="Updated _05_WriteInTheExcel.java" />
     <MESSAGE value="Added _07A_ApachePOIPyramid.java" />
     <MESSAGE value="Updated MultiplicationTable.xlsx" />
@@ -523,6 +531,7 @@
     <MESSAGE value="Added _04_Question.java for JDBC operations" />
     <MESSAGE value="Added _05_FirstLastGetRowGetType.java for JDBC operations" />
     <MESSAGE value="Added _06_Todo.java for JDBC operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added _06_Todo.java for JDBC operations" />
+    <MESSAGE value="Renamed _jdbc package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed _jdbc package" />
   </component>
 </project>

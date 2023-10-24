@@ -4,63 +4,53 @@ import java.sql.*;
 import java.util.*;
 
 public class DBUtility {
-
     public static Connection connection;
-    public static  Statement statement;
+    public static Statement statement;
 
+    public static List<List<String>> getDataList(String sql) {
 
-    public static List<List<String>> getDataList(String sql){
-        DBConnectionOpen();
+        dbConnectionOpen();
 
-        List<List<String>> dataList=new ArrayList<>();
+        List<List<String>> dataList = new ArrayList<>();
 
         try {
-            ResultSet rs = statement.executeQuery(sql);
-            ResultSetMetaData rsmd=rs.getMetaData();
+            ResultSet resultTable = statement.executeQuery(sql);
+            ResultSetMetaData resultTableMetaData = resultTable.getMetaData();
 
-            while (rs.next()) {
-                List<String> rowList=new ArrayList<>();
-                for (int i = 1; i <= rsmd.getColumnCount(); i++) {
-                    rowList.add(rs.getString(i));
+            while (resultTable.next()) {
+                List<String> rowList = new ArrayList<>();
+                for (int i = 1; i <= resultTableMetaData.getColumnCount(); i++) {
+                    rowList.add(resultTable.getString(i));
                 }
 
                 dataList.add(rowList);
             }
-        }
-        catch(Exception ex){
-            System.out.println(ex.getMessage());
+        } catch (Exception exception) {
+            System.out.println(exception.getMessage());
         }
 
-        DBConnectionClose();
+        dbConnectionClose();
         return dataList;
     }
 
-
-
-    public static void DBConnectionOpen()
-    {
-        String HostUrl = "jdbc:mysql://db-technostudy.ckr1jisflxpv.us-east-1.rds.amazonaws.com/sakila";
+    public static void dbConnectionOpen() {
+        String hostUrl = "jdbc:mysql://db-technostudy.ckr1jisflxpv.us-east-1.rds.amazonaws.com/sakila";
         String username = "root";
         String password = "'\"-LhCB'.%k[4S]z";
 
         try {
-            connection = DriverManager.getConnection(HostUrl, username, password);
+            connection = DriverManager.getConnection(hostUrl, username, password);
             statement = connection.createStatement();
-        }
-        catch(Exception ex){
-            System.out.println("ex.getMessage() = " + ex.getMessage());
+        } catch (Exception exception) {
+            System.out.println("exception.getMessage() = " + exception.getMessage());
         }
     }
 
-    public static void DBConnectionClose()
-    {
+    public static void dbConnectionClose() {
         try {
             connection.close();
-        } catch (SQLException ex) {
-            System.out.println("ex.getMessage() = " + ex.getMessage());
+        } catch (SQLException exception) {
+            System.out.println("exception.getMessage() = " + exception.getMessage());
         }
     }
-
-
-
 }

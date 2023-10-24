@@ -1,4 +1,4 @@
-package jdbc.day01;
+package jdbc;
 
 import jdbc.JDBCParent;
 import org.testng.annotations.Test;
