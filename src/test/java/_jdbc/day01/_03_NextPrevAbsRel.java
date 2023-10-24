@@ -33,7 +33,7 @@ public class _03_NextPrevAbsRel extends JDBCParent {
         resultTable.absolute(5);  // Go directly to line 5
         System.out.println("5.Row title = " + resultTable.getString("title"));  // african
 
-        resultTable.relative(5); // Wherever you are at the end, go 5 from there.
+        resultTable.relative(5); // Wherever you are at the end, go 5 from there --> to line 10
         System.out.println("10.Row title = " + resultTable.getString("title")); // alaaddin
 
         resultTable.next(); // Goes to 11
