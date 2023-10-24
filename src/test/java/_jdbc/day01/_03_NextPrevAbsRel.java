@@ -24,6 +24,7 @@ public class _03_NextPrevAbsRel extends JDBCParent {
 
     @Test
     public void test2() throws SQLException {
+
         ResultSet resultTable = statement.executeQuery("select * from film");
 
         resultTable.absolute(10); // Go directly to line 10
