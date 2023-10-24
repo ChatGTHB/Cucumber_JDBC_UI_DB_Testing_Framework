@@ -1,6 +1,6 @@
-package _jdbc.day01;
+package jdbc.day01;
 
-import _jdbc.JDBCParent;
+import jdbc.JDBCParent;
 import org.testng.annotations.Test;
 
 import java.sql.ResultSet;
