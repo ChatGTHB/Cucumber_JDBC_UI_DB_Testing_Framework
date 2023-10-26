@@ -22,13 +22,11 @@ public class DBUtility {
                 for (int i = 1; i <= resultTableMetaData.getColumnCount(); i++) {
                     rowList.add(resultTable.getString(i));
                 }
-
                 dataList.add(rowList);
             }
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
-
         dbConnectionClose();
         return dataList;
     }

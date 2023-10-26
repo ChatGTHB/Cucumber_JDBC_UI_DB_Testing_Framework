@@ -123,12 +123,12 @@ public class _07_GetAllRowColumn extends JDBCParent {
          Bir metoda sorguyu("select * from language") gönderiniz;
          metod size sorgunun datasını bir ArrayList olarak döndürsün.
          -----------------------------------------------------------
-         Send the query("select * from language") to a method;
-         Let the method return you the query data as an ArrayList.
+         Send the sql("select * from language") to a method;
+         Let the method return you the sql data as an ArrayList.
          */
 
-        String query = "select * from language";
-        List<List<String>> returningList = getListData(query);
+        String sql = "select * from language";
+        List<List<String>> returningList = getListData(sql);
 
         for (int i = 0; i < returningList.size(); i++) {
             System.out.println(returningList.get(i));
@@ -136,11 +136,11 @@ public class _07_GetAllRowColumn extends JDBCParent {
         // System.out.println("returningList = " + returningList);
     }
 
-    public List<List<String>> getListData(String query) {
+    public List<List<String>> getListData(String sql) {
         List<List<String>> table = new ArrayList<>();
 
         try {
-            ResultSet resultTable = statement.executeQuery(query);
+            ResultSet resultTable = statement.executeQuery(sql);
             ResultSetMetaData resultTableMetaData = resultTable.getMetaData();
 
             while (resultTable.next()) {
