@@ -13,16 +13,16 @@ public class Hooks {
 
     @After
     public void after(Scenario scenario) {
-        ExcelUtility.writeToExcel("src/test/java/ApachePOI/resource/ScenarioResults.xlsx",
-                scenario,GWD.threadBrowserName.get());
-
-        // Keep the extent report's plugin open while it is active
-        if (scenario.isFailed()) {
-            TakesScreenshot screenshot = ((TakesScreenshot) GWD.getDriver());
-            byte[] stateInMemory = screenshot.getScreenshotAs(OutputType.BYTES);
-            scenario.attach(stateInMemory, "image/png", "screenshot name");
-        }
-        System.out.println("The scenario finished.");
+//        ExcelUtility.writeToExcel("src/test/java/ApachePOI/resource/ScenarioResults.xlsx",
+//                scenario,GWD.threadBrowserName.get());
+//
+//        // Keep the extent report's plugin open while it is active
+//        if (scenario.isFailed()) {
+//            TakesScreenshot screenshot = ((TakesScreenshot) GWD.getDriver());
+//            byte[] stateInMemory = screenshot.getScreenshotAs(OutputType.BYTES);
+//            scenario.attach(stateInMemory, "image/png", "screenshot name");
+//        }
+//        System.out.println("The scenario finished.");
         GWD.quitDriver();
     }
 }
