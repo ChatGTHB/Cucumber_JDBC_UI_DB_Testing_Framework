@@ -44,17 +44,18 @@ public class GWD {
                 default:
                     // Add below lines to run Chrome browser in background while running on Jenkins
                     if (isRunningOnJenkins()) {
-                        ChromeOptions options = new ChromeOptions();
-                        options.addArguments("--remote-allow-origins=*,--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
-                        threadDriver.set(new ChromeDriver(options));
+                        FirefoxOptions fOptions = new FirefoxOptions();
+                        fOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+                        threadDriver.set(new FirefoxDriver(fOptions));
                     } else {
                         threadDriver.set(new ChromeDriver());
                     }
+
                     /**
-                     For Firefox
-                     FirefoxOptions fOptions = new FirefoxOptions();
-                     fOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
-                     threadDriver.set(new FirefoxDriver(fOptions));
+                     For Chrome
+                     ChromeOptions options = new ChromeOptions();
+                     options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+                     threadDriver.set(new ChromeDriver(options));
                      */
 
                     /**
