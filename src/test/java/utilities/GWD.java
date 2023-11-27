@@ -50,7 +50,6 @@ public class GWD {
                     } else {
                         threadDriver.set(new ChromeDriver());
                     }
-
                     /**
                      For Chrome
                      ChromeOptions options = new ChromeOptions();
