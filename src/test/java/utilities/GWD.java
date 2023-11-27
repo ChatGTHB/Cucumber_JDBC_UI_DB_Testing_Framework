@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
@@ -42,9 +43,27 @@ public class GWD {
                     break;
                 default:
                     // Add below lines to run Chrome browser in background while running on Jenkins
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
-                    threadDriver.set(new ChromeDriver(options));
+                    if (isRunningOnJenkins()) {
+                        FirefoxOptions fOptions = new FirefoxOptions();
+                        fOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+                        threadDriver.set(new FirefoxDriver(fOptions));
+                    } else {
+                        threadDriver.set(new ChromeDriver());
+                    }
+
+                    /**
+                     For Chrome
+                     ChromeOptions options = new ChromeOptions();
+                     options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+                     threadDriver.set(new ChromeDriver(options));
+                     */
+
+                    /**
+                     For Edge
+                     EdgeOptions eOptions = new EdgeOptions();
+                     eOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+                     threadDriver.set(new EdgeDriver(eOptions));
+                     */
             }
         }
 
@@ -69,5 +88,10 @@ public class GWD {
 
             threadDriver.set(driver);
         }
+    }
+
+    public static boolean isRunningOnJenkins() {
+        String jenkinsHome = System.getenv("JENKINS_HOME");
+        return jenkinsHome != null && !jenkinsHome.isEmpty();
     }
 }
