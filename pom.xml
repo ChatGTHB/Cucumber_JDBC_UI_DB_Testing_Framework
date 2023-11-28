@@ -165,7 +165,7 @@
 
                             <includes>
                                 <!-- for  run class or classes  **/:Can find its location by all folders  -->
-                                <include>**/_04_TestRunnerRegression.java</include>
+                                <include>**/_05_TestRunnerRegression.java</include>
                             </includes>
 
                         </configuration>
