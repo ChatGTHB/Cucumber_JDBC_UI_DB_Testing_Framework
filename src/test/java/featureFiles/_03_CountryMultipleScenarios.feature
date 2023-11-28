@@ -13,7 +13,7 @@ Feature: Country Multi Scenario
 
   @Regression
   Scenario: Create a country 2
-    When  Create a country that name as "KrmCnt001" code as "U1001"
+    When  Create a country that name as "RandomCountry..." code as "RandomCode..."
     Then  Success message should be displayed
  
 

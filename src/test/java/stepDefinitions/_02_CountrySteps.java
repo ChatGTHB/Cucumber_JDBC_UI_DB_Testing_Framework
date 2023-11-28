@@ -35,6 +35,9 @@ public class _02_CountrySteps {
 
     @When("Create a country that name as {string} code as {string}")
     public void createACountryThatNameAsCodeAs(String name, String code) {
+        name = "RandomCountry" + RandomStringUtils.randomAlphanumeric(8);
+        code = "RandomCode" + RandomStringUtils.randomNumeric(4);
+
         dc.myClick(dc.addButton);
         dc.mySendKeys(dc.nameInput, name);
         dc.mySendKeys(dc.codeInput, code);
