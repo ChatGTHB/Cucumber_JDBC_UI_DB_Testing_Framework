@@ -13,7 +13,7 @@ public class Hooks {
 
     @After
     public void after(Scenario scenario) {
-        ExcelUtility.writeToExcel("src/test/java/ApachePOI/resource/ScenarioResults.xlsx",
+        ExcelUtility.writeToExcel("src/test/java/apachePOI/resource/ScenarioResults.xlsx",
                 scenario,GWD.threadBrowserName.get());
 
         // Keep the extent report's plugin open while it is active
