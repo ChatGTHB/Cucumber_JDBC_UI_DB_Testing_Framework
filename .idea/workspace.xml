@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0caf2c8-7ae1-4d22-a723-93b4435f5e29" name="Changes" comment="Updated Hooks.java">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b0caf2c8-7ae1-4d22-a723-93b4435f5e29" name="Changes" comment="Edited Hooks.java">
+      <change afterPath="$PROJECT_DIR$/testReports/testReport 8-Eki-23 22.20.40/PdfReport.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testReports/testReport 8-Eki-23 22.20.40/test-output/SparkReport/Spark.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testReports/testReport 8-Eki-23 22.20.40/test-output/screenshots/embedded1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testReports/testReport 8-Eki-23 22.20.40/test-output/screenshots/embedded2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/apachePOI/resource/NewExcel.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/apachePOI/resource/ScenarioResults.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apachePOI/resource/ScenarioResults.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/_01_LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/_01_LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/_02_CountrySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/_02_CountrySteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +63,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Cucumber Java.Feature: _01_Login.executor": "Run",
+    "Cucumber Java.Feature: _02_Country.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -112,14 +117,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695406436098</updated>
-    </task>
-    <task id="LOCAL-00104" summary="Added _13_ApachePOICitizen.feature">
-      <option name="closed" value="true" />
-      <created>1696847021996</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1696847021996</updated>
     </task>
     <task id="LOCAL-00105" summary="Added _13_ApachePOISteps.java">
       <option name="closed" value="true" />
@@ -505,7 +502,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703154153939</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="Edited Hooks.java">
+      <option name="closed" value="true" />
+      <created>1711542758631</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1711542758631</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -528,7 +533,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated ApacheExcel.xlsx" />
     <MESSAGE value="Updated ExcelUtility.java" />
     <MESSAGE value="Deleted ScenarioResults.xlsx" />
     <MESSAGE value="Added ScenarioResults.xlsx" />
@@ -553,6 +557,7 @@
     <MESSAGE value="Added profiles for Jenkins" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;pom.xml" />
     <MESSAGE value="Updated Hooks.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Hooks.java" />
+    <MESSAGE value="Edited Hooks.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited Hooks.java" />
   </component>
 </project>

@@ -6,7 +6,7 @@ import utilities.GWD;
 
 
 public class _01_LoginSteps {
-    DialogContent dc = new DialogContent();
+    DialogContent dialogContent = new DialogContent();
 
     @Given("Navigate to Campus")
     public void navigateToCampus() {
@@ -15,13 +15,13 @@ public class _01_LoginSteps {
 
     @When("Enter valid username and password and click login button")
     public void enterValidUsernameAndPasswordAndClickLoginButton() {
-        dc.mySendKeys(dc.username, "turkeyts");
-        dc.mySendKeys(dc.password, "TechnoStudy123");
-        dc.myClick(dc.loginButton);
+        dialogContent.mySendKeys(dialogContent.username, "turkeyts");
+        dialogContent.mySendKeys(dialogContent.password, "TechnoStudy123");
+        dialogContent.myClick(dialogContent.loginButton);
     }
 
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
-        dc.verifyContainsText(dc.textTechnoStudy, "Techno Study");
+        dialogContent.verifyContainsText(dialogContent.textTechnoStudy, "Internship");
     }
 }
