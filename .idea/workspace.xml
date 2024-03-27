@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0caf2c8-7ae1-4d22-a723-93b4435f5e29" name="Changes" comment="Renamed _jdbc package">
-      <change afterPath="$PROJECT_DIR$/src/test/java/jdbc/_07_GetAllRowColumn.java" afterDir="false" />
+    <list default="true" id="b0caf2c8-7ae1-4d22-a723-93b4435f5e29" name="Changes" comment="Updated Hooks.java">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_01_Intro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_01_Intro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_02_Intro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_02_Intro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_03_NextPrevAbsRel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_03_NextPrevAbsRel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_04_Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_04_Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_05_FirstLastGetRowGetType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_05_FirstLastGetRowGetType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jdbc/day01/_06_Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jdbc/_06_Todo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/DBUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/DBUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/apachePOI/resource/NewExcel.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/apachePOI/resource/ScenarioResults.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apachePOI/resource/ScenarioResults.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +23,8 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -60,18 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cihat/IdeaProjects/CucumberCurrent/src/test/java/featureFiles&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Feature: _01_Login.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/cihat/IdeaProjects/CucumberCurrent",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cihat\IdeaProjects\CucumberCurrent\src\test\java\featureFiles" />
@@ -81,6 +80,9 @@
       <recent name="C:\Users\cihat\IdeaProjects\CucumberCurrent\src\test\java\runners" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cihat\IdeaProjects\CucumberCurrent\src\test\java\xml" />
+      <recent name="C:\Users\cihat\IdeaProjects\CucumberCurrent\src\test\java\xml\Regression Test" />
+      <recent name="C:\Users\cihat\IdeaProjects\CucumberCurrent\src\test\java\Regression Test" />
       <recent name="C:\Users\cihat\IdeaProjects\CucumberCurrent\src\test\java\apachePOI" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -91,6 +93,17 @@
       <recent name="apachePOI" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_392-corretto-1.8.0_392-8336523bb0d9-05f2e5ef" />
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+        <option value="jdk-11.0.21-corretto-11.0.21-8336523bb0d9-d3b62f98" />
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+        <option value="jdk-11.0.22-semeru-11.0.22-e1d2075fd9a7-24488771" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -99,78 +112,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695406436098</updated>
-    </task>
-    <task id="LOCAL-00095" summary="Added ExcelUtility.java">
-      <option name="closed" value="true" />
-      <created>1696796619137</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1696796619137</updated>
-    </task>
-    <task id="LOCAL-00096" summary="Added _09_Question_03.java">
-      <option name="closed" value="true" />
-      <created>1696839851798</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1696839851799</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Added _10_Question_04.java">
-      <option name="closed" value="true" />
-      <created>1696841352327</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1696841352327</updated>
-    </task>
-    <task id="LOCAL-00098" summary="Updated _09_Question_03.java">
-      <option name="closed" value="true" />
-      <created>1696841365295</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1696841365295</updated>
-    </task>
-    <task id="LOCAL-00099" summary="Updated ExcelUtility.java">
-      <option name="closed" value="true" />
-      <created>1696841374858</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1696841374858</updated>
-    </task>
-    <task id="LOCAL-00100" summary="Updated _10_Question_04.java">
-      <option name="closed" value="true" />
-      <created>1696841606402</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1696841606402</updated>
-    </task>
-    <task id="LOCAL-00101" summary="Added ScenarioResults.xlsx">
-      <option name="closed" value="true" />
-      <created>1696841627282</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1696841627282</updated>
-    </task>
-    <task id="LOCAL-00102" summary="Updated ExcelUtility.java">
-      <option name="closed" value="true" />
-      <created>1696841959858</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1696841959858</updated>
-    </task>
-    <task id="LOCAL-00103" summary="Added _12_EntranceExamSenaryoOutline.feature">
-      <option name="closed" value="true" />
-      <created>1696847011366</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1696847011366</updated>
     </task>
     <task id="LOCAL-00104" summary="Added _13_ApachePOICitizen.feature">
       <option name="closed" value="true" />
@@ -492,7 +433,79 @@
       <option name="project" value="LOCAL" />
       <updated>1698154414831</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Jenkins adaptations were made">
+      <option name="closed" value="true" />
+      <created>1701119203909</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1701119203909</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Jenkins adaptations were made">
+      <option name="closed" value="true" />
+      <created>1701119390041</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1701119390041</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Added RegressionTest.xml for Jenkins">
+      <option name="closed" value="true" />
+      <created>1701164236491</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1701164236492</updated>
+    </task>
+    <task id="LOCAL-00147" summary="Added plugin to _05_TestRunnerRegression.java class to get a report when run through Jenkins">
+      <option name="closed" value="true" />
+      <created>1701164283299</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1701164283299</updated>
+    </task>
+    <task id="LOCAL-00148" summary="Updated _04_TestRunnerSmoke.java class to get a report when run through Jenkins">
+      <option name="closed" value="true" />
+      <created>1701164309731</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1701164309731</updated>
+    </task>
+    <task id="LOCAL-00149" summary="Added profiles for Jenkins">
+      <option name="closed" value="true" />
+      <created>1701164346163</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1701164346163</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Added profiles for Jenkins">
+      <option name="closed" value="true" />
+      <created>1701164506056</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1701164506056</updated>
+    </task>
+    <task id="LOCAL-00151" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;pom.xml">
+      <option name="closed" value="true" />
+      <created>1701165815969</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1701165815969</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Updated Hooks.java">
+      <option name="closed" value="true" />
+      <created>1703154153938</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1703154153939</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -500,22 +513,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="61" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="71" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="43" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated _05_WriteInTheExcel.java" />
-    <MESSAGE value="Added _07A_ApachePOIPyramid.java" />
-    <MESSAGE value="Updated MultiplicationTable.xlsx" />
-    <MESSAGE value="Updated _09_Question_03.java" />
-    <MESSAGE value="Updated _10_Question_04.java" />
-    <MESSAGE value="Updated _12_ApachePOISteps.java" />
     <MESSAGE value="Updated ApacheExcel.xlsx" />
     <MESSAGE value="Updated ExcelUtility.java" />
-    <MESSAGE value="Updated Hooks.java" />
     <MESSAGE value="Deleted ScenarioResults.xlsx" />
     <MESSAGE value="Added ScenarioResults.xlsx" />
     <MESSAGE value="Added ScenarioResultsDemo.xlsx" />
@@ -532,6 +546,13 @@
     <MESSAGE value="Added _05_FirstLastGetRowGetType.java for JDBC operations" />
     <MESSAGE value="Added _06_Todo.java for JDBC operations" />
     <MESSAGE value="Renamed _jdbc package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed _jdbc package" />
+    <MESSAGE value="Jenkins adaptations were made" />
+    <MESSAGE value="Added RegressionTest.xml for Jenkins" />
+    <MESSAGE value="Added plugin to _05_TestRunnerRegression.java class to get a report when run through Jenkins" />
+    <MESSAGE value="Updated _04_TestRunnerSmoke.java class to get a report when run through Jenkins" />
+    <MESSAGE value="Added profiles for Jenkins" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;pom.xml" />
+    <MESSAGE value="Updated Hooks.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Hooks.java" />
   </component>
 </project>
