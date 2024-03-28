@@ -8,7 +8,7 @@ import utilities.GWD;
 public class _01_LoginSteps {
     DialogContent dialogContent = new DialogContent();
 
-    @Given("Navigate to Campus")
+    @Given("Navigate to campus")
     public void navigateToCampus() {
         GWD.getDriver().get("https://test.mersys.io/");
     }

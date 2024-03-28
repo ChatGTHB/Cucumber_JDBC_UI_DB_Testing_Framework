@@ -7,42 +7,42 @@ import pages.LeftNav;
 
 public class _04_CitizenshipSteps {
 
-    LeftNav ln=new LeftNav();
-    DialogContent dc=new DialogContent();
-    @And("Navigate to Citizenship")
+    LeftNav leftNav =new LeftNav();
+    DialogContent dialogContent =new DialogContent();
+    @And("Navigate to citizenship")
     public void navigateToCitizenship() {
-        ln.myClick(ln.setup);
-        ln.myClick(ln.parameters);
-        ln.myClick(ln.citizenship);
+        leftNav.myClick(leftNav.setup);
+        leftNav.myClick(leftNav.parameters);
+        leftNav.myClick(leftNav.citizenship);
     }
 
-    @When("Create a Citizenship")
+    @When("Create a citizenship")
     public void createACitizenship() {
         String citizenshipName = RandomStringUtils.randomAlphanumeric(8);
         String citizenshipShortCode = RandomStringUtils.randomNumeric(4);
 
-        dc.myClick(dc.addButton);
-        dc.mySendKeys(dc.nameInput, citizenshipName);
-        dc.mySendKeys(dc.shortName, citizenshipShortCode);
-        dc.myClick(dc.saveButton);
+        dialogContent.myClick(dialogContent.addButton);
+        dialogContent.mySendKeys(dialogContent.nameInput, citizenshipName);
+        dialogContent.mySendKeys(dialogContent.shortName, citizenshipShortCode);
+        dialogContent.myClick(dialogContent.saveButton);
     }
 
     @When("Create a Citizenship that name as {string} short name as {string}")
     public void createACitizenshipThatNameAsShortNameAs(String name, String shortName) {
-        dc.myClick(dc.addButton);
-        dc.mySendKeys(dc.nameInput, name);
-        dc.mySendKeys(dc.shortName, shortName);
-        dc.myClick(dc.saveButton);
+        dialogContent.myClick(dialogContent.addButton);
+        dialogContent.mySendKeys(dialogContent.nameInput, name);
+        dialogContent.mySendKeys(dialogContent.shortName, shortName);
+        dialogContent.myClick(dialogContent.saveButton);
 
     }
 
     @Then("Already exist message should be displayed")
     public void alreadyExistMessageShouldBeDisplayed() {
-        dc.verifyContainsText(dc.alreadyExist, "already");
+        dialogContent.verifyContainsText(dialogContent.alreadyExist, "already");
     }
 
     @When("User delete the {string}")
     public void userDeleteThe(String name) {
-        dc.deleteItem(name);
+        dialogContent.deleteItem(name);
     }
 }

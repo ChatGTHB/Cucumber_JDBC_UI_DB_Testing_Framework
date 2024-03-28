@@ -1,9 +1,9 @@
 Feature: Citizenship Functionality
 
-  Scenario: Create a Citizenship
-    Given Navigate to Campus
+  Scenario: Create a citizenship
+    Given Navigate to campus
     When  Enter valid username and password and click login button
     Then  User should login successfully
-    And   Navigate to Citizenship
-    When  Create a Citizenship
+    And   Navigate to citizenship
+    When  Create a citizenship
     Then  Success message should be displayed

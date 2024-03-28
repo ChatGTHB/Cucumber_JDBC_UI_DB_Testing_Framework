@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0caf2c8-7ae1-4d22-a723-93b4435f5e29" name="Changes" comment="Edited Hooks.java">
-      <change afterPath="$PROJECT_DIR$/testReports/testReport 8-Eki-23 22.20.40/PdfReport.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testReports/testReport 8-Eki-23 22.20.40/test-output/SparkReport/Spark.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testReports/testReport 8-Eki-23 22.20.40/test-output/screenshots/embedded1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testReports/testReport 8-Eki-23 22.20.40/test-output/screenshots/embedded2.png" afterDir="false" />
+    <list default="true" id="b0caf2c8-7ae1-4d22-a723-93b4435f5e29" name="Changes" comment="The repository has been updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/apachePOI/resource/ScenarioResults.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apachePOI/resource/ScenarioResults.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/_01_Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/_01_Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/_02_Country.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/_02_Country.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/_03_CountryMultipleScenarios.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/_03_CountryMultipleScenarios.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/_04_Citizenship.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/_04_Citizenship.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/_05_CitizenshipParameter.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/_05_CitizenshipParameter.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/_06_ScenarioOutlineCitizenship.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/_06_ScenarioOutlineCitizenship.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/_07_CitizenshipDelete.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/_07_CitizenshipDelete.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/_01_LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/_01_LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/_02_CountrySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/_02_CountrySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/_04_CitizenshipSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/_04_CitizenshipSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +68,8 @@
   "keyToString": {
     "Cucumber Java.Feature: _01_Login.executor": "Run",
     "Cucumber Java.Feature: _02_Country.executor": "Run",
+    "Cucumber Java.Feature: _03_CountryMultipleScenarios.executor": "Run",
+    "Cucumber Java.Feature: _04_Citizenship.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -117,14 +123,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695406436098</updated>
-    </task>
-    <task id="LOCAL-00105" summary="Added _13_ApachePOISteps.java">
-      <option name="closed" value="true" />
-      <created>1696847029879</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1696847029879</updated>
     </task>
     <task id="LOCAL-00106" summary="Updated ApacheExcel.xlsx">
       <option name="closed" value="true" />
@@ -510,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711542758631</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="The repository has been updated">
+      <option name="closed" value="true" />
+      <created>1711544711929</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1711544711929</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -533,7 +539,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated ExcelUtility.java" />
     <MESSAGE value="Deleted ScenarioResults.xlsx" />
     <MESSAGE value="Added ScenarioResults.xlsx" />
     <MESSAGE value="Added ScenarioResultsDemo.xlsx" />
@@ -558,6 +563,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;pom.xml" />
     <MESSAGE value="Updated Hooks.java" />
     <MESSAGE value="Edited Hooks.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited Hooks.java" />
+    <MESSAGE value="The repository has been updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="The repository has been updated" />
   </component>
 </project>
