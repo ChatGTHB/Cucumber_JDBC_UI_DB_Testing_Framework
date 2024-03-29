@@ -2,12 +2,8 @@ package apachePOI;
 
 public class _01_2DArray {
     public static void main(String[] args) {
-        String[][] zoo = {
-                {"Lion", "1"},
-                {"Tiger", "2"},
-                {"Elephant", "3", "1"},
-                {"Monkey", "4"}
-        };
+
+        String[][] zoo = {{"Lion", "1"}, {"Tiger", "2"}, {"Elephant", "3", "1"}, {"Monkey", "4"}};
 
         System.out.println("--------------------------------");
         System.out.println(zoo[2][0]);
