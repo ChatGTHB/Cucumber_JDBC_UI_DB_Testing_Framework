@@ -13,10 +13,13 @@ Feature: Citizenship Functionality
     When Create a citizenship that name as "<name>" short name as "<shortname>"
     Then Already exist message should be displayed
 
+    When User delete the citizenship that name as "<name>"
+    Then Success message should be displayed
+
     Examples:
       | name      | shortname |
-      | krm23s001 | sh56is1   |
-      | krm23s002 | sh56is2   |
-      | krm23s003 | sh56is3   |
-      | krm23s004 | sh56is4   |
-      | krm23s005 | sh56is5   |
+      | krm23s001 | sh561     |
+      | krm23s002 | sh562     |
+      | krm23s003 | sh563     |
+      | krm23s004 | sh564     |
+      | krm23s005 | sh565     |

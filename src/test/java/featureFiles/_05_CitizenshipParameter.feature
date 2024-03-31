@@ -1,7 +1,7 @@
 # Scenario
-# Go to the Citizenship page.
+# Go to the citizenships page.
 # Verify the create operation with the parameter method.
-# Then verify that it is not possible to Create again with the same information. (Negative test)
+# Then verify that it is not possible to create again with the same information. (Negative test)
 # Verify the deletion of the information entered in a separate scenario
 
 
@@ -14,13 +14,12 @@ Feature: Citizenship Functionality
     And Navigate to citizenship
 
   Scenario: Create a Citizenship
-    When Create a citizenship that name as "krmsd1013" short name as "ksd13"
+    When Create a citizenship that name as "krmsd1014" short name as "ksd14"
     Then Success message should be displayed
 
-    When Create a citizenship that name as "krmsd1013" short name as "ksd13"
+    When Create a citizenship that name as "krmsd1014" short name as "ksd14"
     Then Already exist message should be displayed
 
-  Scenario: Delete the citizenship
-    When User delete the citizenship that name as "krmsd1013"
+    When User delete the citizenship that name as "krmsd1014"
     Then Success message should be displayed
 

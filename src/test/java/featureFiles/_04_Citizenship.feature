@@ -1,6 +1,6 @@
 # Scenario:
 # Go to the #Citizenships page.
-# Verify that 1 Citizenship registration can be made.
+# Verify that one citizenship registration can be made.
 
 Feature: Citizenship Functionality
 

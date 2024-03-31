@@ -28,14 +28,14 @@ public class _08_DataTableExample {
     }
 
     @And("Write username and password as DataTable")
-    public void writeUsernameAndPasswordAsDataTable(DataTable usersAndPasswords) {
-        List<List<String>> usersAndPasswordsLists = usersAndPasswords.asLists(String.class);
+    public void writeUsernameAndPasswordAsDataTable(DataTable credentials) {
+        List<List<String>> credentialsLists = credentials.asLists(String.class);
 
-        for (int i = 0; i < usersAndPasswordsLists.size(); i++) {
-            List<String> usersAndPasswordsList = usersAndPasswordsLists.get(i);
-            System.out.printf("User = %-15s <--> Password = %s%n",
-                    usersAndPasswordsList.get(0),  // username
-                    usersAndPasswordsList.get(1)); // password
+        for (int i = 0; i < credentialsLists.size(); i++) {
+            List<String> credentialsList = credentialsLists.get(i);
+            System.out.printf("User = %-10s <--> Password = %s%n",
+                    credentialsList.get(0),  // username
+                    credentialsList.get(1)); // password
         }
     }
 }
