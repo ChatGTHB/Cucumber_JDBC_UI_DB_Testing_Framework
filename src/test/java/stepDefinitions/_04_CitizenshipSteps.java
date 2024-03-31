@@ -27,13 +27,12 @@ public class _04_CitizenshipSteps {
         dialogContent.myClick(dialogContent.saveButton);
     }
 
-    @When("Create a Citizenship that name as {string} short name as {string}")
+    @When("Create a citizenship that name as {string} short name as {string}")
     public void createACitizenshipThatNameAsShortNameAs(String name, String shortName) {
         dialogContent.myClick(dialogContent.addButton);
         dialogContent.mySendKeys(dialogContent.nameInput, name);
         dialogContent.mySendKeys(dialogContent.shortName, shortName);
         dialogContent.myClick(dialogContent.saveButton);
-
     }
 
     @Then("Already exist message should be displayed")
@@ -41,8 +40,8 @@ public class _04_CitizenshipSteps {
         dialogContent.verifyContainsText(dialogContent.alreadyExist, "already");
     }
 
-    @When("User delete the {string}")
-    public void userDeleteThe(String name) {
+    @When("User delete the citizenship that name as {string}")
+    public void userDeleteTheCitizenshipThatNameAs(String name) {
         dialogContent.deleteItem(name);
     }
 }

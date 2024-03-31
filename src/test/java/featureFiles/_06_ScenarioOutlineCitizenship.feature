@@ -7,10 +7,10 @@ Feature: Citizenship Functionality
     And Navigate to citizenship
 
   Scenario Outline: Create a Citizenship
-    When Create a Citizenship that name as "<name>" short name as "<shortname>"
+    When Create a citizenship that name as "<name>" short name as "<shortname>"
     Then Success message should be displayed
 
-    When Create a Citizenship that name as "<name>" short name as "<shortname>"
+    When Create a citizenship that name as "<name>" short name as "<shortname>"
     Then Already exist message should be displayed
 
     Examples:

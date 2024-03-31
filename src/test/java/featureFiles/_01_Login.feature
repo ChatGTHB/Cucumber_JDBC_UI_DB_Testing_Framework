@@ -1,3 +1,8 @@
+# Login function check
+# First go to the website (driver.get)
+# Then enter your Login information (username password sendkeys)
+# Then check (verify) that you are logged in
+
 Feature: Login functionality
 
   @SmokeTest

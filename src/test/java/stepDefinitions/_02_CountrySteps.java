@@ -34,13 +34,13 @@ public class _02_CountrySteps {
     }
 
     @When("Create a country that name as {string} code as {string}")
-    public void createACountryThatNameAsCodeAs(String name, String code) {
-        name = "RandomCountry" + RandomStringUtils.randomAlphanumeric(8);
-        code = "RandomCode" + RandomStringUtils.randomNumeric(4);
+    public void createACountryThatNameAsCodeAs(String countryName, String countryCode) {
+        countryName = "RandomCountry" + RandomStringUtils.randomAlphanumeric(8);
+        countryCode = "RandomCode" + RandomStringUtils.randomNumeric(4);
 
         dialogContent.myClick(dialogContent.addButton);
-        dialogContent.mySendKeys(dialogContent.nameInput, name);
-        dialogContent.mySendKeys(dialogContent.codeInput, code);
+        dialogContent.mySendKeys(dialogContent.nameInput, countryName);
+        dialogContent.mySendKeys(dialogContent.codeInput, countryCode);
         dialogContent.myClick(dialogContent.saveButton);
     }
 }

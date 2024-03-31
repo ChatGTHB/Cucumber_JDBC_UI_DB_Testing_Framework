@@ -1,3 +1,7 @@
+# Scenario:
+# Go to the #Citizenships page.
+# Verify that 1 Citizenship registration can be made.
+
 Feature: Citizenship Functionality
 
   Scenario: Create a citizenship
