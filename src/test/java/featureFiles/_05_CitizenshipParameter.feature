@@ -22,4 +22,3 @@ Feature: Citizenship Functionality
 
     When User delete the citizenship that name as "krmsd1014"
     Then Success message should be displayed
-
