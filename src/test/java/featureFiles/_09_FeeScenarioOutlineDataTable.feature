@@ -32,9 +32,9 @@ Feature: Fees Multiple Values Functionality
     Then Success message should be displayed
 
     Examples:
-      | name    | code | intCode  | priority |
-      | KrmFee1 | 2224 | PayPal   | 1234     |
-      | KrmFee2 | 2225 | Cash     | 1235     |
-      | KrmFee3 | 2226 | Cheque   | 1236     |
-      | KrmFee4 | 2227 | ApplePay | 1237     |
-      | KrmFee5 | 2229 | Crypto   | 1238     |
+      | name     | code   | intCode  | priority |
+      | KrmFee10 | 902224 | PayPal   | 994304   |
+      | KrmFee20 | 802225 | Cash     | 912305   |
+      | KrmFee30 | 702226 | Cheque   | 901230   |
+      | KrmFee40 | 602227 | ApplePay | 912307   |
+      | KrmFee50 | 502229 | Crypto   | 912308   |

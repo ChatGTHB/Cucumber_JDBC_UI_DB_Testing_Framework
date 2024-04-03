@@ -1,6 +1,8 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
 import pages.DialogContent;
 import pages.LeftNav;
@@ -44,4 +46,3 @@ public class _02_CountrySteps {
         dialogContent.myClick(dialogContent.saveButton);
     }
 }
-

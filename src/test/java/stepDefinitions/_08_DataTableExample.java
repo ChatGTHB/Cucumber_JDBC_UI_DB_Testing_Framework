@@ -1,7 +1,8 @@
 package stepDefinitions;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class _08_DataTableExample {
 
     @And("Write username as DataTable")
     public void writeUsernameAsDataTable(DataTable users) {
+
         List<String> listUsers = users.asList(String.class); // list
 
         for (int i = 0; i < listUsers.size(); i++) {
@@ -29,13 +31,14 @@ public class _08_DataTableExample {
 
     @And("Write username and password as DataTable")
     public void writeUsernameAndPasswordAsDataTable(DataTable credentials) {
+
         List<List<String>> credentialsLists = credentials.asLists(String.class);
 
         for (int i = 0; i < credentialsLists.size(); i++) {
             List<String> credentialsList = credentialsLists.get(i);
-            System.out.printf("User = %-10s <--> Password = %s%n",
-                    credentialsList.get(0),  // username
+            System.out.printf("User = %-10s <--> Password = %s%n", credentialsList.get(0),  // username
                     credentialsList.get(1)); // password
         }
     }
 }
+

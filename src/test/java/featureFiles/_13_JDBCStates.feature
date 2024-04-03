@@ -14,4 +14,5 @@ Feature: Testing JDBC States
       | setup      |
       | parameters |
       | states     |
+
     Then Send the query the database "select name from states limit 10" and control match

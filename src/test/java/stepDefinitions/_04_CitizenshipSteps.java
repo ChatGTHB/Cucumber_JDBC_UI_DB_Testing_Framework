@@ -1,14 +1,17 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
 import pages.DialogContent;
 import pages.LeftNav;
 
 public class _04_CitizenshipSteps {
 
-    LeftNav leftNav =new LeftNav();
-    DialogContent dialogContent =new DialogContent();
+    LeftNav leftNav = new LeftNav();
+    DialogContent dialogContent = new DialogContent();
+
     @And("Navigate to citizenship")
     public void navigateToCitizenship() {
         leftNav.myClick(leftNav.setup);

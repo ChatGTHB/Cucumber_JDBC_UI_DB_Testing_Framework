@@ -1,8 +1,12 @@
 package stepDefinitions;
 
-import io.cucumber.java.*;
-import org.openqa.selenium.*;
-import utilities.*;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import utilities.ExcelUtility;
+import utilities.GWD;
 
 public class Hooks {
 
@@ -13,8 +17,8 @@ public class Hooks {
 
     @After
     public void after(Scenario scenario) {
-        ExcelUtility.writeToExcel("src/test/java/apachePOI/resource/ScenarioResults.xlsx",
-                scenario,GWD.threadBrowserName.get());
+
+        ExcelUtility.writeToExcel("src/test/java/apachePOI/resource/ScenarioResults.xlsx", scenario, GWD.threadBrowserName.get());
 
         // Keep the extent report's plugin open while it is active
         if (scenario.isFailed()) {
@@ -26,3 +30,4 @@ public class Hooks {
         GWD.quitDriver();
     }
 }
+
