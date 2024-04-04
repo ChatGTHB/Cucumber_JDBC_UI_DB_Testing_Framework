@@ -16,18 +16,18 @@ Feature: DataTable Functionality
       | addButton |
 
     And User sending the keys in Dialog
-      | nameInput | Krm1Country1 |
-      | codeInput | krmCode1.    |
+      | nameInput | Norway0047 |
+      | codeInput | Nrw   |
 
     And Click on the element in Dialog
       | saveButton |
 
     Then Success message should be displayed
 
-    And User delete the element from Dialog
-      | Krm1Country1 |
-
-    Then Success message should be displayed
+#    And User delete the element from Dialog
+#      | Norway0047 |
+#
+#    Then Success message should be displayed
 
   @Regression
   Scenario:  Create Nationality

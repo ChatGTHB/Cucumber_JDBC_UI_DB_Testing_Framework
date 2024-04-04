@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -85,9 +86,9 @@ public class DialogContent extends Parent {
     public void deleteItem(String searchText) {
         mySendKeys(searchInput, searchText);
         myClick(searchButton);
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+//      wait.until(ExpectedConditions.elementToBeClickable(searchButton));
 //      Alternative Way:
-//      wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//ms-delete-button//button"),1));
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//ms-delete-button//button"),1));
         myClick(deleteImageButton);
         myClick(deleteDialogButton);
     }
