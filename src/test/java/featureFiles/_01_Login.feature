@@ -5,7 +5,7 @@
 
 Feature: Login functionality
 
-  @SmokeTest
+  @SmokeTest @Regression
   Scenario: Login with valid username and password
     Given Navigate to campus
     When  Enter valid username and password and click login button

@@ -5,6 +5,7 @@ Feature: DataTable Functionality
     When Enter valid username and password and click login button
     Then User should login successfully
 
+  @Regression
   Scenario: Create Country
     And Click on the element in LeftNav
       | setup      |
@@ -28,7 +29,7 @@ Feature: DataTable Functionality
 
     Then Success message should be displayed
 
-
+  @Regression
   Scenario:  Create Nationality
     And Click on the element in LeftNav
       | setup         |
@@ -51,7 +52,7 @@ Feature: DataTable Functionality
 
     Then Success message should be displayed
 
-
+  @Regression
   Scenario: Fee Functionality
     And Click on the element in LeftNav
       | setup      |

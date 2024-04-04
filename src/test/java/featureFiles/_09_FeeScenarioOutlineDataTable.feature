@@ -5,6 +5,7 @@ Feature: Fees Multiple Values Functionality
     When Enter valid username and password and click login button
     Then User should login successfully
 
+  @Regression
   Scenario Outline: Fee Functionality
     And Click on the element in LeftNav
       | setup      |

@@ -6,6 +6,7 @@ Feature: Citizenship Functionality
     Then User should login successfully
     And Navigate to citizenship
 
+  @Regression
   Scenario Outline: Create a Citizenship
     When Create a citizenship that name as "<name>" short name as "<shortname>"
     Then Success message should be displayed

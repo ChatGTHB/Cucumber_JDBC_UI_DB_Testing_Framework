@@ -8,6 +8,7 @@ Feature: Nationality functionality
     When Enter valid username and password and click login button
     Then User should login successfully
 
+  @Regression
   Scenario Outline: Create Nationality and Delete
     And Click on the element in LeftNav
       | setup         |
