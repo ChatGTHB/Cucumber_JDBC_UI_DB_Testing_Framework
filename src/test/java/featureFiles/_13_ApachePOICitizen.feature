@@ -1,5 +1,6 @@
-#  Excelden okuduğunuz Citizenship bilgilerinin önce hepsini kaydedin
-#  daha sonra da siliniz.
+# Scenario:
+# First save all the Citizenship information you read from Excel
+# Then delete it.
 
 Feature: ApachePOI Citizen Functionality
 

@@ -23,12 +23,12 @@ public class LeftNav extends Parent {
     private WebElement nationalities;
     @FindBy(xpath = "(//span[text()='Fees'])[1]")
     private WebElement fees;
-    @FindBy(xpath = "(//span[text()='Entrance Exams'])[1]")
-    private WebElement entranceExamsOne;
-    @FindBy(xpath = "(//span[text()='Setup'])[2]")
-    private WebElement setupTwo;
-    @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
-    private WebElement entranceExamsTwo;
+    @FindBy(xpath = "(//span[text()='Inventory'])[1]")
+    public WebElement inventory;
+    @FindBy(xpath = "(//span[text()='Setup'])[4]")
+    public WebElement setupInventory;
+    @FindBy(xpath = "//span[text()='Item Categories']")
+    public WebElement itemCategories;
     @FindBy(xpath="(//span[text()='States'])[1]")
     private WebElement states;
 
@@ -46,12 +46,12 @@ public class LeftNav extends Parent {
                 return this.nationalities;
             case "fees":
                 return this.fees;
-            case "entranceExamsOne":
-                return this.entranceExamsOne;
-            case "setupTwo":
-                return this.setupTwo;
-            case "entranceExamsTwo":
-                return this.entranceExamsTwo;
+            case "itemCategories":
+                return this.itemCategories;
+            case "inventory":
+                return this.inventory;
+            case "setupInventory":
+                return this.setupInventory;
             case "states":
                 return this.states;
         }

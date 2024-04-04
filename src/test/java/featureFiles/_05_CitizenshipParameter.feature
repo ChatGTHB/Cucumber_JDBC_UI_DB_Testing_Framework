@@ -14,11 +14,11 @@ Feature: Citizenship Functionality
     And Navigate to citizenship
 
   Scenario: Create a Citizenship
-    When Create a citizenship that name as "krmsd1014" short name as "ksd14"
+    When Create a citizenship that name as "World citizenship" short name as "world"
     Then Success message should be displayed
 
-    When Create a citizenship that name as "krmsd1014" short name as "ksd14"
+    When Create a citizenship that name as "World citizenship" short name as "world"
     Then Already exist message should be displayed
 
-    When User delete the citizenship that name as "krmsd1014"
+    When User delete the citizenship that name as "World citizenship"
     Then Success message should be displayed

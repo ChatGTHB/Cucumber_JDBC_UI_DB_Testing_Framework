@@ -17,9 +17,9 @@ Feature: Citizenship Functionality
     Then Success message should be displayed
 
     Examples:
-      | name      | shortname |
-      | krm23s001 | sh561     |
-      | krm23s002 | sh562     |
-      | krm23s003 | sh563     |
-      | krm23s004 | sh564     |
-      | krm23s005 | sh565     |
+      | name       | shortname |
+      | Turkish    | sh561     |
+      | Canadian   | sh562     |
+      | Australian | sh563     |
+      | Norwegian  | sh564     |
+      | German     | sh565     |

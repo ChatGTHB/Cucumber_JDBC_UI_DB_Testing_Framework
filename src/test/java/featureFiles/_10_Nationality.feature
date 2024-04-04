@@ -30,9 +30,9 @@ Feature: Nationality functionality
 
     Then Success message should be displayed
     Examples:
-      | name      |
-      | krm23s001 |
-      | krm23s002 |
-      | krm23s003 |
-      | krm23s004 |
-      | krm23s005 |
+      | name        |
+      | Turkish01   |
+      | Kurdish01   |
+      | Italian01   |
+      | Spanish01   |
+      | Norwegian01 |

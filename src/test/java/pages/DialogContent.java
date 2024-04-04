@@ -1,17 +1,14 @@
 package pages;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.*;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utilities.GWD;
 
 import java.util.List;
 
 public class DialogContent extends Parent {
-    public DialogContent() {
-        PageFactory.initElements(GWD.getDriver(), this);
-    }
-
     @FindBy(css = "input[formcontrolname='username']")
     public WebElement username;
     @FindBy(css = "input[formcontrolname='password']")
@@ -34,6 +31,13 @@ public class DialogContent extends Parent {
     public WebElement shortName;
     @FindBy(xpath = "//div[contains(text(),'already exists')]")
     public WebElement alreadyExist;
+    @FindBy(xpath = "//mat-chip-list[@formcontrolname='roles' ]//input")
+    public WebElement userType;
+    @FindBy(xpath = "//span[text()=' Student ']")
+    public WebElement student;
+    @FindBy(xpath = "//span[text()=' Administrator ']")
+    public WebElement administrator;
+    public List<WebElement> nameList;
     @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Name']")
     private WebElement searchInput;
     @FindBy(xpath = "//ms-search-button//button")
@@ -48,18 +52,9 @@ public class DialogContent extends Parent {
     private WebElement priorityCode;
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
     private WebElement toggleBar;
-    @FindBy(xpath = "//mat-select//span[text()='Academic Period']")
-    private WebElement academicPeriod;
-    @FindBy(xpath = "//mat-option/span")
-    private WebElement academicPeriod1;
-    @FindBy(xpath = "(//span[text()='Grade Level'])[1]")
-    private WebElement gradeLevel;
-    @FindBy(xpath = "(//*[@role='option'])[4]")
-    private WebElement gradeLevel2;
-    @FindBy(xpath = "//mat-select//span[text()='Test 2024']")
-    private WebElement searchAcademicPeriod;
-    @FindBy(xpath = "//tbody[@role='rowgroup']//tr//td[2]")
-    public List<WebElement> nameList;
+    public DialogContent() {
+        PageFactory.initElements(GWD.getDriver(), this);
+    }
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -77,16 +72,12 @@ public class DialogContent extends Parent {
                 return this.priorityCode;
             case "toggleBar":
                 return this.toggleBar;
-            case "academicPeriod":
-                return this.academicPeriod;
-            case "academicPeriod1":
-                return this.academicPeriod1;
-            case "gradeLevel":
-                return this.gradeLevel;
-            case "gradeLevel2":
-                return this.gradeLevel2;
-            case "searchAcademicPeriod":
-                return this.searchAcademicPeriod;
+            case "userType":
+                return this.userType;
+            case "student":
+                return this.student;
+            case "administrator":
+                return this.administrator;
         }
         return null;
     }
