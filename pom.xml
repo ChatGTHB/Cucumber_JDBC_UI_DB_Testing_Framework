@@ -70,7 +70,7 @@
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.9.2</version>
+            <version>1.10.1</version>
         </dependency>
 
         <dependency>
@@ -89,7 +89,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.18</version>
+            <version>8.0.33</version>
         </dependency>
 
     </dependencies>
