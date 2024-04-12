@@ -11,7 +11,6 @@ import java.io.IOException;
 
 public class _07A_ApachePOIPyramid {
 
-
     public static void main(String[] args) throws IOException {
 
         String path = "src/test/java/apachePOI/resource/_ApachePOIPyramid.xlsx";

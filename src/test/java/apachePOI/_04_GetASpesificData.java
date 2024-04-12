@@ -29,8 +29,6 @@ public class _04_GetASpesificData {
     public static void main(String[] args) throws IOException {
         String returningResult = bringFromExcel("address");
         System.out.println(returningResult);
-
-
     }
 
     private static String bringFromExcel(String searchWord) throws IOException {
