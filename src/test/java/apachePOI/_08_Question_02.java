@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class _08_Question_02 {
+
     public static void main(String[] args) throws IOException {
         /**
          *  Yeni bir excel dosyasına çarpım tablosunu

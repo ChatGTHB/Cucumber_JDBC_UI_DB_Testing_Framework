@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class _03_ApachePOIGetAllData {
+
     public static void main(String[] args) throws IOException {
 
         String path = "src/test/java/apachePOI/resource/ApacheExcel.xlsx";
