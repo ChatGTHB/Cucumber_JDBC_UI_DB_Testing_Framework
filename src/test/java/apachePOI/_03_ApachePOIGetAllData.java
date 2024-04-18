@@ -12,18 +12,20 @@ public class _03_ApachePOIGetAllData {
         String path = "src/test/java/apachePOI/resource/ApacheExcel.xlsx";
         FileInputStream fileInputStream = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fileInputStream);
-
         Sheet sheet = workbook.getSheetAt(0); // Sheet sheet=workbook.getSheet("Sheet1");
-        int rowCount = sheet.getPhysicalNumberOfRows();
+
+        int rowCount = sheet.getPhysicalNumberOfRows(); // How many rows are there, up to the first null row.
 
         // The First Way
         for (int i = 0; i < rowCount; i++) {
             Row row = sheet.getRow(i);
             int cellCount = row.getPhysicalNumberOfCells();
+
             for (int j = 0; j < cellCount; j++) {
                 Cell cell = row.getCell(j);
                 System.out.print(cell + "\t");
             }
+
             System.out.println();
         }
 
