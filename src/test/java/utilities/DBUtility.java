@@ -1,9 +1,11 @@
 package utilities;
 
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBUtility {
+
     public static Connection connection;
     public static Statement statement;
 
