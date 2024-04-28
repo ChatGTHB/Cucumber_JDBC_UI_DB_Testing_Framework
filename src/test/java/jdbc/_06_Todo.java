@@ -25,7 +25,6 @@ public class _06_Todo extends JDBCParent {
         for (int i = 1; i <= lastRowNumber; i++) {
             resultTable.absolute(i);
             System.out.println("City name with absolute = " + resultTable.getString("city"));
-            System.out.println("i = " + i);
         }
     }
 
