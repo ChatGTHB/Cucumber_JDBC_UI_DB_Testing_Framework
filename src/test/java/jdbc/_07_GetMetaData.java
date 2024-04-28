@@ -34,15 +34,15 @@ public class _07_GetMetaData extends JDBCParent {
         resultTable.next(); // I has gone to the first row
 
         for (int i = 1; i <= columnCount; i++) {
-            System.out.print(i + ")- " + resultTable.getString(i) + "\t");
-            // I can print data in all columns
+            System.out.println("Column " + i + " header: " + resultSetMetaData.getColumnName(i) + " " + resultSetMetaData.getColumnTypeName(i) + "\t");
+            // I printed the names and types of the columns
         }
 
         System.out.println();
 
         for (int i = 1; i <= columnCount; i++) {
-            System.out.print(i + ")- " + resultSetMetaData.getColumnName(i) + " " + resultSetMetaData.getColumnTypeName(i) + "\t");
-            // I printed the names and types of the columns
+            System.out.println("Column " + i + ")- " + resultTable.getString(i) + "\t");
+            // I can print data in all columns
         }
     }
 
