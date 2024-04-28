@@ -1,4 +1,4 @@
-# Automated_UI_And_DB_Testing_Framework
+# Automated UI and DB Testing Framework
 
 ## Scenario Outline
 ## Data Table
