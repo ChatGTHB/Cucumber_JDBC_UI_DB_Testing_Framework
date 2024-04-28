@@ -17,7 +17,7 @@ public class JDBCParent {
 
         try {
             connection = DriverManager.getConnection(hostUrl, username, password);
-            statement = connection.createStatement();
+            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         } catch (Exception exception) {
             System.out.println("exception.getMessage() = " + exception.getMessage());
         }

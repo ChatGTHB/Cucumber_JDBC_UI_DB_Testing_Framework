@@ -11,11 +11,10 @@ public class DBUtility {
 
     public static List<List<String>> getDataList(String sql) {
 
-        dbConnectionOpen();
-
         List<List<String>> dataList = new ArrayList<>();
 
         try {
+            dbConnectionOpen();
             ResultSet resultTable = statement.executeQuery(sql);
             ResultSetMetaData resultTableMetaData = resultTable.getMetaData();
 
@@ -28,12 +27,15 @@ public class DBUtility {
             }
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
+        } finally {
+            dbConnectionClose();
         }
-        dbConnectionClose();
+
         return dataList;
     }
 
     public static void dbConnectionOpen() {
+
         String hostUrl = "jdbc:mysql://db-technostudy.ckr1jisflxpv.us-east-1.rds.amazonaws.com/sakila";
         String username = "root";
         String password = "'\"-LhCB'.%k[4S]z";
@@ -47,6 +49,7 @@ public class DBUtility {
     }
 
     public static void dbConnectionClose() {
+
         try {
             connection.close();
         } catch (SQLException exception) {
