@@ -11,19 +11,26 @@ public class DBUtility {
 
     public static List<List<String>> getDataList(String sql) {
 
-        List<List<String>> dataList = new ArrayList<>();
+        List<List<String>> table = new ArrayList<>();
 
         try {
             dbConnectionOpen();
             ResultSet resultTable = statement.executeQuery(sql);
             ResultSetMetaData resultTableMetaData = resultTable.getMetaData();
 
+            ArrayList<String> columnNames = new ArrayList<>();
+            for (int i = 1; i <= resultTableMetaData.getColumnCount(); i++) {
+                columnNames.add(resultTableMetaData.getColumnName(i));
+            }
+
+            table.add(columnNames);
+
             while (resultTable.next()) {
                 List<String> rowList = new ArrayList<>();
                 for (int i = 1; i <= resultTableMetaData.getColumnCount(); i++) {
                     rowList.add(resultTable.getString(i));
                 }
-                dataList.add(rowList);
+                table.add(rowList);
             }
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
@@ -31,7 +38,7 @@ public class DBUtility {
             dbConnectionClose();
         }
 
-        return dataList;
+        return table;
     }
 
     public static void dbConnectionOpen() {
@@ -44,7 +51,7 @@ public class DBUtility {
             connection = DriverManager.getConnection(hostUrl, username, password);
             statement = connection.createStatement();
         } catch (Exception exception) {
-            System.out.println("exception.getMessage() = " + exception.getMessage());
+            System.out.println(exception.getMessage());
         }
     }
 
@@ -53,7 +60,7 @@ public class DBUtility {
         try {
             connection.close();
         } catch (SQLException exception) {
-            System.out.println("exception.getMessage() = " + exception.getMessage());
+            System.out.println(exception.getMessage());
         }
     }
 }
