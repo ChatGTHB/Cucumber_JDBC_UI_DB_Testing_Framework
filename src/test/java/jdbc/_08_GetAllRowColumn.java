@@ -11,41 +11,34 @@ public class _08_GetAllRowColumn extends JDBCParent {
 
     @Test
     public void test01() {
-        /**
-         Bir metoda sorguyu("select * from language") gönderiniz;
-         metod size sorgunun datasını bir ArrayList olarak döndürsün.
-         -----------------------------------------------------------
-         Send the sql("select * from language") to a method;
-         Let the method return you the sql data as an ArrayList.
-         */
-
         String sql = "select * from language";
         List<List<String>> returningList = getListData(sql);
 
-        for (int i = 0; i < returningList.size(); i++) {
-            System.out.println(returningList.get(i));
+        for (int rowIndex = 0; rowIndex < returningList.size(); rowIndex++) {
+            List<String> row = returningList.get(rowIndex);
+            for (int columnIndex = 0; columnIndex < row.size(); columnIndex++) {
+                System.out.printf("%-15s", row.get(columnIndex));
+            }
+            System.out.println();
         }
-        // System.out.println("returningList = " + returningList);
     }
 
     public List<List<String>> getListData(String sql) {
-
         List<List<String>> table = new ArrayList<>();
 
         try {
             ResultSet resultTable = statement.executeQuery(sql);
             ResultSetMetaData resultTableMetaData = resultTable.getMetaData();
 
-            // Column names added to the first row of the table
-            ArrayList<String> kolonSatiri = new ArrayList<>();
-            for (int i = 1; i <= resultTableMetaData.getColumnCount(); i++)
-                kolonSatiri.add(resultTableMetaData.getColumnName(i));
-            table.add(kolonSatiri);
+            ArrayList<String> columnNames = new ArrayList<>();
+            for (int i = 1; i <= resultTableMetaData.getColumnCount(); i++) {
+                columnNames.add(resultTableMetaData.getColumnName(i));
+            }
+
+            table.add(columnNames);
 
             while (resultTable.next()) {
-
                 List<String> row = new ArrayList<>();
-
                 for (int i = 1; i <= resultTableMetaData.getColumnCount(); i++) {
                     row.add(resultTable.getString(i));
                 }
