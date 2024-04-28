@@ -9,6 +9,7 @@ import utilities.DBUtility;
 import java.util.List;
 
 public class _13_JDBCSteps {
+
     DialogContent dialogContent = new DialogContent();
 
     @Then("Send the query the database {string} and control match")
@@ -31,7 +32,7 @@ public class _13_JDBCSteps {
         // Compare
         for (int i = 0; i < dbList.size(); i++) {
             System.out.println(dbList.get(i).get(0) + " - " + UIList.get(i).getText());
-            Assert.assertEquals(dbList.get(i).get(0).trim(), UIList.get(i).getText().trim(), "Pairing failed");
+            Assert.assertEquals(dbList.get(i).get(0), UIList.get(i).getText().trim(), "Pairing failed");
         }
     }
 }

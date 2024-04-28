@@ -18,12 +18,12 @@ public class DBUtility {
             ResultSet resultTable = statement.executeQuery(sql);
             ResultSetMetaData resultTableMetaData = resultTable.getMetaData();
 
-            ArrayList<String> columnNames = new ArrayList<>();
-            for (int i = 1; i <= resultTableMetaData.getColumnCount(); i++) {
-                columnNames.add(resultTableMetaData.getColumnName(i));
-            }
-
-            table.add(columnNames);
+//            ArrayList<String> columnNames = new ArrayList<>();
+//            for (int i = 1; i <= resultTableMetaData.getColumnCount(); i++) {
+//                columnNames.add(resultTableMetaData.getColumnName(i));
+//            }
+//
+//            table.add(columnNames);
 
             while (resultTable.next()) {
                 List<String> rowList = new ArrayList<>();

@@ -38,6 +38,7 @@ public class DialogContent extends Parent {
     public WebElement student;
     @FindBy(xpath = "//span[text()=' Administrator ']")
     public WebElement administrator;
+    @FindBy(xpath = "//tbody//tr//td[2]")
     public List<WebElement> nameList;
     @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Name']")
     private WebElement searchInput;
