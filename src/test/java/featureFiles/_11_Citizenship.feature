@@ -4,29 +4,29 @@
 Feature: CitizenShip functionality
 
   Background:
-    Given Navigate to Campus
-    When Enter username and password and click login button
+    Given Navigate to campus
+    When Enter valid username and password and click login button
     Then User should login successfully
 
   Scenario Outline: Create CitizenShip and Delete
-    And Click on the Element in LeftNav
+    And Click on the element in LeftNav
       | setup       |
       | parameters  |
       | citizenship |
 
-    And Click on the Element in Dialog
+    And Click on the element in Dialog
       | addButton |
 
     And User sending the keys in Dialog
       | nameInput | <name>  |
       | shortName | <short> |
 
-    And Click on the Element in Dialog
+    And Click on the element in Dialog
       | saveButton |
 
     Then Success message should be displayed
 
-    And User delete the Element from Dialog
+    And User delete the element from Dialog
       | <name> |
 
     Then Success message should be displayed

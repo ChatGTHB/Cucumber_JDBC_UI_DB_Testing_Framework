@@ -40,7 +40,7 @@ public class DialogContent extends Parent {
     public WebElement administrator;
     @FindBy(xpath = "//tbody//tr//td[2]")
     public List<WebElement> nameList;
-    @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Name']")
+    @FindBy(xpath = "//mat-form-field//input[@placeholder='Name']")
     private WebElement searchInput;
     @FindBy(xpath = "//ms-search-button//button")
     private WebElement searchButton;
@@ -54,6 +54,7 @@ public class DialogContent extends Parent {
     private WebElement priorityCode;
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
     private WebElement toggleBar;
+
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
@@ -66,6 +67,8 @@ public class DialogContent extends Parent {
                 return this.saveButton;
             case "nameInput":
                 return this.nameInput;
+            case "shortName":
+                return this.shortName;
             case "codeInput":
                 return this.codeInput;
             case "integrationCode":
@@ -87,8 +90,8 @@ public class DialogContent extends Parent {
     public void deleteItem(String searchText) {
         mySendKeys(searchInput, searchText);
         myClick(searchButton);
-//      wait.until(ExpectedConditions.elementToBeClickable(searchButton));
-//      Alternative Way:
+        // wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+        // Alternative Way:
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//ms-delete-button//button"),1));
         myClick(deleteImageButton);
         myClick(deleteDialogButton);

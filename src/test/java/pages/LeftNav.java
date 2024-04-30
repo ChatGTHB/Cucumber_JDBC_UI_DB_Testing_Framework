@@ -40,7 +40,7 @@ public class LeftNav extends Parent {
                 return this.parameters;
             case "countries":
                 return this.countries;
-            case "citizenShip":
+            case "citizenship":
                 return this.citizenship;
             case "nationalities":
                 return this.nationalities;
