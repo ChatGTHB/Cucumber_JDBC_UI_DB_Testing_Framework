@@ -8,6 +8,7 @@ import utilities.GWD;
 
 
 public class _01_LoginSteps {
+
     DialogContent dialogContent = new DialogContent();
 
     @Given("Navigate to campus")

@@ -9,6 +9,7 @@ import pages.LeftNav;
 import java.util.List;
 
 public class _09_DataTableSteps {
+
     LeftNav leftNav = new LeftNav();
     DialogContent dialogContent = new DialogContent();
 

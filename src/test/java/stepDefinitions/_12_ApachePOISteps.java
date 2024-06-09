@@ -8,6 +8,7 @@ import utilities.ExcelUtility;
 import java.util.ArrayList;
 
 public class _12_ApachePOISteps {
+
     DialogContent dialogContent = new DialogContent();
 
     @When("User create citizenship with ApachePOI")
