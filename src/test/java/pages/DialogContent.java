@@ -92,7 +92,7 @@ public class DialogContent extends Parent {
         myClick(searchButton);
         // wait.until(ExpectedConditions.elementToBeClickable(searchButton));
         // Alternative Way:
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//ms-delete-button//button"),1));
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//ms-delete-button//button"), 1));
         myClick(deleteImageButton);
         myClick(deleteDialogButton);
     }
