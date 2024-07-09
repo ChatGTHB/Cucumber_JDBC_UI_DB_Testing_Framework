@@ -76,6 +76,7 @@ Cucumber_JDBC_UI_DB_Testing_Framework/
 ├── test-output/
 ├── testReports/
 ├── .gitignore
+├── LICENCE
 ├── pom.xml
 └── README.md
 ```
