@@ -37,11 +37,11 @@ public class _06_TestRunnerSmokeWithPlugin {
 
                 @BeforeClass(alwaysRun = true)
                 public void setUp() {
-                        // Zaman damgası kullanarak benzersiz bir dosya adı oluşturma
+                        // Create a unique file name using a timestamp
                         String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
                         String reportFile = "target/site/cucumber-pretty-" + timestamp + ".html";
 
-                        // Dinamik olarak plugin ayarını değiştirme
+                        // Dynamically change plugin setting
                         System.setProperty("cucumber.plugin", "html:" + reportFile);
                 }
 
@@ -53,20 +53,14 @@ public class _06_TestRunnerSmokeWithPlugin {
         }
 
         public static void main(String[] args) {
-                // Dinamik olarak plugin ayarını Cucumber Options ile birleştirme
+                // Dynamically merge plugin setting with Cucumber Options
                 String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
                 String reportFile = "target/site/cucumber-pretty-" + timestamp + ".html";
                 System.setProperty("cucumber.plugin", "html:" + reportFile);
 
-                // TestNG sınıfını başlatma
+                // Initialize the TestNG class
                 org.testng.TestNG testNG = new org.testng.TestNG();
                 testNG.setTestClasses(new Class[]{TestRunner.class});
                 testNG.run();
         }
 }
-
-
-
-
-
-
