@@ -1,12 +1,20 @@
-### README for Cucumber JDBC UI DB Testing Framework
 
----
+# Cucumber JDBC UI DB Testing Framework
 
 ## Overview
 
 The Cucumber JDBC UI DB Testing Framework is an automated testing solution designed for seamless integration of UI and database (DB) testing using Cucumber, Selenium, JDBC, and TestNG. This framework supports cross-browser testing and generates detailed reports.
 
----
+## Table of Contents
+
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Configuration](#configuration)
+4. [Usage](#usage)
+5. [Folder Structure](#folder-structure)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
 
 ## Features
 
@@ -17,8 +25,6 @@ The Cucumber JDBC UI DB Testing Framework is an automated testing solution desig
 - **Cross Browsers**: Support for multiple browsers.
 - **Apache POI**: Read and write data to Excel files.
 - **JDBC**: Perform database operations using JDBC.
-
----
 
 ## Installation
 
@@ -32,23 +38,17 @@ The Cucumber JDBC UI DB Testing Framework is an automated testing solution desig
     - IntelliJ IDEA will automatically detect and import the project as a Maven project.
     - Wait for the dependencies to be downloaded.
 
----
-
 ## Configuration
 
 1. **Configure properties**:
     - Open `src/test/resources/cucumber.properties` and `src/test/resources/extent.properties`.
     - Update the files with your database and browser details.
 
----
-
 ## Usage
 
 1. **Run tests**:
     - In IntelliJ IDEA, open the `src/test/java` directory.
     - Right-click on any test file or directory and select `Run 'TestName'`.
-
----
 
 ## Folder Structure
 
@@ -76,12 +76,10 @@ Cucumber_JDBC_UI_DB_Testing_Framework/
 ├── test-output/
 ├── testReports/
 ├── .gitignore
-├── LICENCE
+├── LICENSE
 ├── pom.xml
 └── README.md
 ```
-
----
 
 ## Contributing
 
@@ -91,13 +89,9 @@ Cucumber_JDBC_UI_DB_Testing_Framework/
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a Pull Request.
 
----
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 ## Contact
 
@@ -105,6 +99,4 @@ For questions or issues, please open an issue in this repository.
 
 ---
 
-This README provides a comprehensive guide to setting up and using the Cucumber JDBC UI DB Testing Framework, ensuring efficient and effective automated testing.
-
-For more details, visit the [GitHub repository](https://github.com/ChatGTHB/Cucumber_JDBC_UI_DB_Testing_Framework).
+This README provides a comprehensive guide to setting up and using the Cucumber JDBC UI DB Testing Framework, ensuring efficient and effective automated testing. For more details, visit the [GitHub repository](https://github.com/ChatGTHB/Cucumber_JDBC_UI_DB_Testing_Framework).
