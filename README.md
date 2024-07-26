@@ -171,8 +171,6 @@ Cucumber_JDBC_UI_DB_Testing_Framework/
 │   └── test/                   # Test source code
 │       ├── java/
 │       │   ├── apachePOI/      # Apache POI
-
- related files
 │       │   ├── featureFiles/   # Gherkin feature files
 │       │   ├── jdbc/           # JDBC related files
 │       │   ├── pages/          # Page Object Model files
