@@ -209,6 +209,7 @@ The following dependencies are required for the project to work. These dependenc
 
 ## Contributing
 
+Contributions are welcome!
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
 3. Commit your changes (`git commit -m 'Add new feature'`).
