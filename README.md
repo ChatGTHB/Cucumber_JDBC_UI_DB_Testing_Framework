@@ -1,4 +1,3 @@
-
 # Cucumber JDBC UI DB Testing Framework
 
 ![Cucumber](https://img.shields.io/badge/Cucumber-23D96C?style=for-the-badge&logo=cucumber&logoColor=white)
@@ -9,15 +8,34 @@
 ![Apache POI](https://img.shields.io/badge/Apache%20POI-231F20?style=for-the-badge&logo=apache&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Why Use This Framework?](#why-use-this-framework)
+3. [Key Benefits](#key-benefits)
+4. [Application Under Test](#application-under-test)
+5. [Database Used](#database-used)
+6. [Reporting](#reporting)
+7. [Features](#features)
+8. [Installation](#installation)
+9. [Configuration](#configuration)
+10. [Usage](#usage)
+11. [Parallel Testing](#parallel-testing)
+12. [Folder Structure](#folder-structure)
+13. [Dependencies](#dependencies)
+14. [Contributing](#contributing)
+15. [License](#license)
+16. [Contact](#contact)
+
 ## Introduction
 
 The Cucumber JDBC UI DB Testing Framework is an automated testing solution designed for seamless integration of UI and database (DB) testing using Cucumber, Selenium, JDBC, and TestNG. This framework supports cross-browser testing and generates detailed reports.
 
-### Why Use This Framework?
+## Why Use This Framework?
 
 In modern software development, ensuring the quality of both the user interface and the backend database is crucial. Manual testing can be time-consuming and prone to errors. This framework offers a robust solution by combining the strengths of Cucumber for behavior-driven development (BDD), Selenium for UI testing, JDBC for database interactions, and TestNG for test execution and reporting.
 
-### Key Benefits
+## Key Benefits
 
 - **Seamless Integration**: Easily integrate UI and DB tests in a single framework.
 - **Behavior-Driven Development**: Use Gherkin syntax to define test scenarios in a human-readable format.
@@ -29,15 +47,15 @@ In modern software development, ensuring the quality of both the user interface 
 - **Jenkins Integration**: The framework can be easily integrated into Jenkins for continuous integration/delivery (CI/CD) processes.
 - **Page Object Model (POM)**: Improve test maintenance and readability by using the Page Object Model design pattern.
 
-### Application Under Test
+## Application Under Test
 
 This framework is currently used to test the [Mersys](https://test.mersys.io/) application. Mersys is a comprehensive solution that requires thorough testing to ensure its reliability and performance.
 
-### Database Used
+## Database Used
 
 This framework uses the [Sakila](https://dev.mysql.com/doc/sakila/en/) database for database testing. Sakila is an example database commonly used for educational and testing purposes.
 
-### Reporting
+## Reporting
 
 Test results are stored in the `test-output` and `testReports` directories. Test reports are generated in both HTML and PDF formats and may include screenshots. Additionally, test scenario results are recorded in the `ScenarioResults.xlsx` file.
 
@@ -50,19 +68,6 @@ Example `ScenarioResults.xlsx` content:
 | Login Test        | Passed   | Chrome    |
 | Search Test       | Failed   | Firefox   |
 | Checkout Test     | Passed   | Edge      |
-
-## Table of Contents
-
-1. [Features](#features)
-2. [Installation](#installation)
-3. [Configuration](#configuration)
-4. [Usage](#usage)
-5. [Parallel Testing](#parallel-testing)
-6. [Folder Structure](#folder-structure)
-7. [Dependencies](#dependencies)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Contact](#contact)
 
 ## Features
 
@@ -78,59 +83,71 @@ Example `ScenarioResults.xlsx` content:
 
 ## Installation
 
-1. **Clone the repository**:
-    - Open IntelliJ IDEA.
-    - Go to `File` > `New` > `Project from Version Control`.
-    - In the URL field, enter the repository URL: `https://github.com/ChatGTHB/Cucumber_JDBC_UI_DB_Testing_Framework.git`.
-    - Click `Clone`.
+1. Clone the repository:
+   - Open IntelliJ IDEA.
+   - Go to File > New > Project from Version Control.
+   - In the URL field, enter the repository URL: https://github.com/ChatGTHB/Cucumber_JDBC_UI_DB_Testing_Framework.git.
+   - Click Clone.
 
-2. **Open the project**:
-    - IntelliJ IDEA will automatically detect and import the project as a Maven project.
-    - Wait for the dependencies to be downloaded.
+2. Install necessary plugins:
+   - In order to work with Cucumber and Gherkin in IntelliJ IDEA, ensure you have the following plugins installed:
+      - Cucumber for Java (by JetBrains)
+      - Gherkin (by JetBrains)
+
+   - To install these plugins:
+      1. Open IntelliJ IDEA and go to File > Settings (or Preferences on macOS).
+      2. Navigate to Plugins in the left sidebar.
+      3. Search for Cucumber for Java and Gherkin in the marketplace tab.
+      4. Install both plugins and restart IntelliJ IDEA if prompted.
+
+3. Open the project:
+   - IntelliJ IDEA will automatically detect and import the project as a Maven project.
+   - Wait for the dependencies to be downloaded.
+
 
 ## Configuration
 
 1. **Configure properties**:
-    - Open `src/test/resources/cucumber.properties` and update the file with your database and browser details:
-        ```properties
-        browser=chrome
-        dbUrl=jdbc:mysql://localhost:3306/sakila
-        dbUser=root
-        dbPassword=password
-        ```
-    - Open `src/test/resources/extent.properties` and configure reporting options:
-        ```properties
-        reportPath=test-output/extent-report.html
-        screenshotPath=test-output/screenshots/
-        ```
+   - Open `src/test/resources/cucumber.properties` and update the file with your database and browser details:
+       ```properties
+       browser=chrome
+       dbUrl=jdbc:mysql://localhost:3306/sakila
+       dbUser=root
+       dbPassword=password
+       ```
+   - Open `src/test/resources/extent.properties` and configure reporting options:
+       ```properties
+       reportPath=test-output/extent-report.html
+       screenshotPath=test-output/screenshots/
+       ```
 
 ## Usage
 
 1. **Run tests**:
-    - In IntelliJ IDEA, open the `src/test/java` directory.
-    - Right-click on any test file or directory and select `Run 'TestName'`.
+   - In IntelliJ IDEA, open the `src/test/java` directory.
+   - Right-click on any test file or directory and select `Run 'TestName'`.
 
 2. **Jenkins Integration**:
-    - Create or configure a Jenkins job.
-    - Add a `Build Step` to run tests using the `pom.xml` file. Follow these steps:
+   - Create or configure a Jenkins job.
+   - Add a `Build Step` to run tests using the `pom.xml` file. Follow these steps:
 
-      a. **Add a Maven Project in Jenkins**:
+     a. **Add a Maven Project in Jenkins**:
       - In Jenkins, click "New Item".
       - Enter a project name and select "Maven Project".
       - Click "OK".
 
-      b. **Source Code Management**:
+     b. **Source Code Management**:
       - In the "Source Code Management" section, enter the Git repository URL.
       - Provide necessary credentials.
 
-      c. **Build Triggers**:
+     c. **Build Triggers**:
       - In the "Build Triggers" section, select appropriate triggers (e.g., "GitHub hook trigger for GITScm polling").
 
-      d. **Build Steps**:
+     d. **Build Steps**:
       - In the "Build" section, click "Add build step" and select "Invoke top-level Maven targets".
       - In the "Goals" field, enter `clean test`.
 
-      e. **Post-build Actions**:
+     e. **Post-build Actions**:
       - In the "Post-build Actions" section, add "Publish HTML reports" and specify the path to the HTML reports (e.g., `test-output`).
 
 ## Parallel Testing
@@ -138,27 +155,27 @@ Example `ScenarioResults.xlsx` content:
 To run tests in parallel using TestNG XML files, you can use the provided `ParallelTest.xml`, `RegressionTest.xml`, and `SmokeTest.xml` files. Follow these steps to enable parallel execution:
 
 1. **Use the `ParallelTest.xml` file**:
-    - Open the `ParallelTest.xml` file located in the `src/test/resources/xml` directory.
-    - Ensure the suite tag includes `parallel` and `thread-count` attributes. For example:
-      ```xml
-      <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-      <suite name="ParallelSuite" parallel="tests" thread-count="4">
-          <test name="ParallelTest1">
-              <classes>
-                  <class name="com.example.tests.TestClass1"/>
-              </classes>
-          </test>
-          <test name="ParallelTest2">
-              <classes>
-                  <class name="com.example.tests.TestClass2"/>
-              </classes>
-          </test>
-      </suite>
-      ```
+   - Open the `ParallelTest.xml` file located in the `src/test/resources/xml` directory.
+   - Ensure the suite tag includes `parallel` and `thread-count` attributes. For example:
+     ```xml
+     <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+     <suite name="ParallelSuite" parallel="tests" thread-count="4">
+         <test name="ParallelTest1">
+             <classes>
+                 <class name="com.example.tests.TestClass1"/>
+             </classes>
+         </test>
+         <test name="ParallelTest2">
+             <classes>
+                 <class name="com.example.tests.TestClass2"/>
+             </classes>
+         </test>
+     </suite>
+     ```
 
 2. **Run the tests**:
-    - In IntelliJ IDEA, right-click on the `ParallelTest.xml` file and select `Run 'ParallelTest.xml'`.
-    - This will execute the tests defined in the XML file in parallel, according to the configuration.
+   - In IntelliJ IDEA, right-click on the `ParallelTest.xml` file and select `Run 'ParallelTest.xml'`.
+   - This will execute the tests defined in the XML file in parallel, according to the configuration.
 
 ## Folder Structure
 
@@ -225,3 +242,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For questions or issues, please open an issue in this repository.
 
 ---
+
