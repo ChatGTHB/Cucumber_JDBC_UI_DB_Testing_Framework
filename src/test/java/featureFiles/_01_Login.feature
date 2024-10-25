@@ -1,4 +1,5 @@
-# Login function check
+# Login Function Check:
+
 # First go to the website (driver.get)
 # Then enter your Login information (username password sendkeys)
 # Then check (verify) that you are logged in

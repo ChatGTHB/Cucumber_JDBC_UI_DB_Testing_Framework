@@ -218,6 +218,7 @@ The following dependencies are required for the project to work. These dependenc
 - **Cucumber TestNG**: Integrates Cucumber with TestNG.
 - **SLF4J API**: Logging framework.
 - **SLF4J Simple**: Simple logging implementation for SLF4J.
+- **Java Faker**: Generates realistic fake data for testing purposes, such as names, addresses, and alphanumeric strings.
 - **Apache Commons Lang**: Utility library for Java.
 - **Extent Reports Cucumber Adapter**: Integrates Extent Reports with Cucumber.
 - **Apache POI**: Library for reading and writing Excel files.

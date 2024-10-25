@@ -1,9 +1,9 @@
 package stepDefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.commons.lang3.RandomStringUtils;
 import pages.DialogContent;
 import pages.LeftNav;
 
@@ -11,6 +11,7 @@ public class _02_CountrySteps {
 
     DialogContent dialogContent = new DialogContent();
     LeftNav leftNav = new LeftNav();
+    Faker faker = new Faker();
 
     @And("Navigate to country")
     public void navigateToCountry() {
@@ -21,8 +22,8 @@ public class _02_CountrySteps {
 
     @When("Create a country")
     public void createACountry() {
-        String countryName = RandomStringUtils.randomAlphanumeric(8);
-        String countryCode = RandomStringUtils.randomNumeric(4);
+        String countryName = faker.country().name() + " - " + faker.country().countryCode3();
+        String countryCode = faker.country().countryCode3();
 
         dialogContent.myClick(dialogContent.addButton);
         dialogContent.mySendKeys(dialogContent.nameInput, countryName);
@@ -37,8 +38,8 @@ public class _02_CountrySteps {
 
     @When("Create a country that name as {string} code as {string}")
     public void createACountryThatNameAsCodeAs(String countryName, String countryCode) {
-        countryName = "RandomCountry" + RandomStringUtils.randomAlphanumeric(8);
-        countryCode = "RandomCode" + RandomStringUtils.randomNumeric(4);
+        countryName = "RandomCountry" + " - " + faker.country().name() + " - " + faker.country().countryCode3();
+        countryCode = "RandomCode" + faker.country().countryCode3();
 
         dialogContent.myClick(dialogContent.addButton);
         dialogContent.mySendKeys(dialogContent.nameInput, countryName);

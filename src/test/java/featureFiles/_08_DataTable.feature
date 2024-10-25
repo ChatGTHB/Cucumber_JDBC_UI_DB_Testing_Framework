@@ -17,17 +17,17 @@ Feature: DataTable Functionality
 
     And User sending the keys in Dialog
       | nameInput | Norway0047 |
-      | codeInput | Nrw   |
+      | codeInput | Nrw        |
 
     And Click on the element in Dialog
       | saveButton |
 
     Then Success message should be displayed
 
-#    And User delete the element from Dialog
-#      | Norway0047 |
-#
-#    Then Success message should be displayed
+    And User delete the element from Dialog
+      | Norway0047 |
+
+    Then Success message should be displayed
 
   @Regression
   Scenario:  Create Nationality
@@ -65,8 +65,8 @@ Feature: DataTable Functionality
     And User sending the keys in Dialog
       | nameInput       | Krm1Fee1 |
       | codeInput       | i2323    |
-      | integrationCode | 121      |
-      | priorityCode    | 2323     |
+      | integrationCode | 12155    |
+      | priorityCode    | 123456   |
 
     And Click on the element in Dialog
       | toggleBar  |

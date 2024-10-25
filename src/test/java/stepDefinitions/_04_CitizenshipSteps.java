@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,6 +12,7 @@ public class _04_CitizenshipSteps {
 
     LeftNav leftNav = new LeftNav();
     DialogContent dialogContent = new DialogContent();
+    Faker faker = new Faker();
 
     @And("Navigate to citizenship")
     public void navigateToCitizenship() {
@@ -21,8 +23,8 @@ public class _04_CitizenshipSteps {
 
     @When("Create a citizenship")
     public void createACitizenship() {
-        String citizenshipName = RandomStringUtils.randomAlphanumeric(8);
-        String citizenshipShortCode = RandomStringUtils.randomNumeric(4);
+        String citizenshipName = faker.nation().nationality()+ " - " + faker.random().hex(3);
+        String citizenshipShortCode = faker.random().hex(3);
 
         dialogContent.myClick(dialogContent.addButton);
         dialogContent.mySendKeys(dialogContent.nameInput, citizenshipName);

@@ -6,7 +6,6 @@ import io.cucumber.java.en.When;
 import pages.DialogContent;
 import utilities.GWD;
 
-
 public class _01_LoginSteps {
 
     DialogContent dialogContent = new DialogContent();

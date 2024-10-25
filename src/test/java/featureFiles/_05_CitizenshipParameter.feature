@@ -1,9 +1,9 @@
-# Scenario
+# Scenario:
+
 # Go to the citizenships page.
 # Verify the create operation with the parameter method.
 # Then verify that it is not possible to create again with the same information. (Negative test)
 # Verify the deletion of the information entered in a separate scenario
-
 
 Feature: Citizenship Functionality
 

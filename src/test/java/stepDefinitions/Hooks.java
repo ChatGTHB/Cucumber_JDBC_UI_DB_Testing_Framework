@@ -17,7 +17,6 @@ public class Hooks {
 
     @After
     public void after(Scenario scenario) {
-
         ExcelUtility.writeToExcel("src/test/java/apachePOI/resource/ScenarioResults.xlsx", scenario, GWD.threadBrowserName.get());
 
         // Keep the extent report's plugin open while it is active
@@ -26,7 +25,9 @@ public class Hooks {
             byte[] stateInMemory = screenshot.getScreenshotAs(OutputType.BYTES);
             scenario.attach(stateInMemory, "image/png", "screenshot name");
         }
+
         System.out.println("The scenario finished.");
+
         GWD.quitDriver();
     }
 }

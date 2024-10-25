@@ -1,4 +1,5 @@
 # Scenario:
+
 # Go to the #Citizenships page.
 # Verify that one citizenship registration can be made.
 

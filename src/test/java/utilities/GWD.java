@@ -2,7 +2,6 @@ package utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -14,8 +13,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class GWD {
-    private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
     public static ThreadLocal<String> threadBrowserName = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
 
@@ -30,7 +29,6 @@ public class GWD {
         }
 
         if (threadDriver.get() == null) {
-
             switch (threadBrowserName.get()) {
                 case "firefox":
                     threadDriver.set(new FirefoxDriver());
