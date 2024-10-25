@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is the pom.xml used for Maven configuration and dependency management. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Project model version, specified as 4.0.0, which Maven uses -->
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Project-specific identity details -->
+    <!-- Group ID: Typically the company or organization name, e.g., org.example -->
     <groupId>org.example</groupId>
+    <!-- Artifact ID: A unique, short name for the project -->
     <artifactId>Cucumber_JDBC_UI_DB_Testing_Framework</artifactId>
+    <!-- Project version: 1.0-SNAPSHOT indicates the project is in the development stage -->
     <version>1.0-SNAPSHOT</version>
 
+    <!-- Additional configuration settings and project properties -->
     <properties>
+        <!-- Java compiler version (Java 11) -->
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <!-- Encoding configuration for the project -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Language configuration (setting default language to English) -->
         <argLine>-Duser.language=en</argLine>
     </properties>
 
+    <!-- Dependencies -->
     <dependencies>
-
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!-- Selenium WebDriver library for browser automation -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.18.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <!-- Cucumber library for writing feature files in Gherkin syntax (used in Java) -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -32,7 +42,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <!-- TestNG library for organizing and managing test cases -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -40,7 +50,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+        <!-- Cucumber TestNG integration for running Cucumber tests within the TestNG framework -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
@@ -48,12 +58,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- SLF4J API for logging (API only, requires implementation) -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.8.0-beta2</version>
         </dependency>
 
+        <!-- SLF4J Simple Logger for simple, console-based logging (used during testing) -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -61,40 +73,43 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Apache Commons Lang for utilities to handle core Java functionalities (e.g., String manipulation) -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
 
+        <!-- ExtentReports adapter for Cucumber 7 to generate rich test reports -->
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.10.1</version>
         </dependency>
 
+        <!-- Apache POI library for reading and writing Microsoft Office Excel files -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>4.1.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <!-- Apache POI library (OOXML version) for handling Excel files in .xlsx format -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>4.1.1</version>
         </dependency>
 
+        <!-- MySQL JDBC driver for database connection and interaction with MySQL databases -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
-
     </dependencies>
 
-    <!--  Plugin where we determine where Jenkins' run command will run -->
+    <!-- Plugin configuration where we determine where Jenkins' run command will execute -->
     <build>
         <plugins>
             <plugin>
@@ -103,12 +118,13 @@
                 <version>3.0.0-M1</version>
                 <configuration>
 
-                    <!--                    <suiteXmlFiles>-->
-                    <!--                        <suiteXmlFile>src/test/java/xml/SmokeTest.xml</suiteXmlFile>-->
-                    <!--                    </suiteXmlFiles>-->
+                    <!-- Uncomment the following suiteXmlFiles section to specify a custom XML test suite file -->
+                    <!-- <suiteXmlFiles> -->
+                    <!--    <suiteXmlFile>src/test/java/xml/SmokeTest.xml</suiteXmlFile> -->
+                    <!-- </suiteXmlFiles> -->
 
                     <includes>
-                        <!-- for  run class or classes  **/:Can find its location by all folders  -->
+                        <!-- Specifies which class or classes to run; **/ allows locating by any folder structure -->
                         <include>**/_04_TestRunnerSmoke.java</include>
                     </includes>
 
@@ -119,10 +135,9 @@
 
     <profiles>
 
+        <!-- Profile for running Smoke tests -->
         <profile>
-
             <id>SmokeNew</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -131,12 +146,13 @@
                         <version>3.0.0-M1</version>
                         <configuration>
 
-                            <!--                    <suiteXmlFiles>-->
-                            <!--                        <suiteXmlFile>src/test/java/xml/SmokeTest.xml</suiteXmlFile>-->
-                            <!--                    </suiteXmlFiles>-->
+                            <!-- Uncomment the following suiteXmlFiles section to specify a custom XML test suite file -->
+                            <!-- <suiteXmlFiles> -->
+                            <!--    <suiteXmlFile>src/test/java/xml/SmokeTest.xml</suiteXmlFile> -->
+                            <!-- </suiteXmlFiles> -->
 
                             <includes>
-                                <!-- for  run class or classes  **/:Can find its location by all folders  -->
+                                <!-- Specifies which class or classes to run; **/ allows locating by any folder structure -->
                                 <include>**/_04_TestRunnerRegression.java</include>
                             </includes>
 
@@ -144,13 +160,11 @@
                     </plugin>
                 </plugins>
             </build>
-
         </profile>
 
+        <!-- Profile for running Regression tests -->
         <profile>
-
             <id>Regression</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -159,12 +173,13 @@
                         <version>3.0.0-M1</version>
                         <configuration>
 
-                            <!--                    <suiteXmlFiles>-->
-                            <!--                        <suiteXmlFile>src/test/java/xml/RegressionTest.xml</suiteXmlFile>-->
-                            <!--                    </suiteXmlFiles>-->
+                            <!-- Uncomment the following suiteXmlFiles section to specify a custom XML test suite file -->
+                            <!-- <suiteXmlFiles> -->
+                            <!--    <suiteXmlFile>src/test/java/xml/RegressionTest.xml</suiteXmlFile> -->
+                            <!-- </suiteXmlFiles> -->
 
                             <includes>
-                                <!-- for  run class or classes  **/:Can find its location by all folders  -->
+                                <!-- Specifies which class or classes to run; **/ allows locating by any folder structure -->
                                 <include>**/_05_TestRunnerRegression.java</include>
                             </includes>
 
@@ -172,7 +187,6 @@
                     </plugin>
                 </plugins>
             </build>
-
         </profile>
 
     </profiles>
