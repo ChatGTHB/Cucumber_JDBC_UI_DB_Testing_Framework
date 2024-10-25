@@ -1,25 +1,25 @@
-# Nationality menusunun kayıt ve silme özelliğini
-# (DataTable ile) 5 farklı değer seti ile çalıştırınız.
+# Save and delete feature of the CitizenShip menu
+# (with DataTable) Run with 5 different value sets.
 
-Feature: Nationality functionality
+Feature: CitizenShip functionality
 
   Background:
     Given Navigate to campus
     When Enter valid username and password and click login button
     Then User should login successfully
 
-  @Regression
-  Scenario Outline: Create Nationality and Delete
+  Scenario Outline: Create CitizenShip and Delete
     And Click on the element in LeftNav
-      | setup         |
-      | parameters    |
-      | nationalities |
+      | setup       |
+      | parameters  |
+      | citizenship |
 
     And Click on the element in Dialog
       | addButton |
 
     And User sending the keys in Dialog
-      | nameInput | <name> |
+      | nameInput | <name>  |
+      | shortName | <shortname> |
 
     And Click on the element in Dialog
       | saveButton |
@@ -31,9 +31,9 @@ Feature: Nationality functionality
 
     Then Success message should be displayed
     Examples:
-      | name        |
-      | Turkish01   |
-      | Kurdish01   |
-      | Italian01   |
-      | Spanish01   |
-      | Norwegian01 |
+      | name       | shortname |
+      | Turkish    | sh561     |
+      | Canadian   | sh562     |
+      | Australian | sh563     |
+      | Norwegian  | sh564     |
+      | German     | sh565     |

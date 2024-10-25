@@ -60,6 +60,13 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//tbody//tr//td[2]")
     public List<WebElement> nameList;
 
+    ////mat-select[@formcontrolname='id']//span
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[3]//span")
+    public WebElement countrySelect;
+
+    @FindBy(xpath = "(//mat-option[@role='option'])[3]//span")
+    public WebElement countryOption;
+
     @FindBy(xpath = "//mat-form-field//input[@placeholder='Name']")
     private WebElement searchInput;
 
@@ -105,6 +112,10 @@ public class DialogContent extends Parent {
                 return this.student;
             case "administrator":
                 return this.administrator;
+            case "countrySelect":
+                return this.countrySelect;
+            case "countryOption":
+                return this.countryOption;
         }
         return null;
     }

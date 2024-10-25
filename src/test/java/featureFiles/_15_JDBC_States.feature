@@ -1,6 +1,10 @@
-# Scenario: Check whether the first 10 data in the States menu are the same as the data in the DB.
+# Scenario:
+
+# Check whether the first 10 data in the States menu are the same as the data in the DB.
 # *****--------------------------------*****----------------------------------------*****
-# Senaryo: States menusunde gelen ilk 10 verinin DB deki data ile aynı olup olmadığını kontrol ediniz.
+# Senaryo:
+
+# States menusunde gelen ilk 10 verinin DB deki data ile aynı olup olmadığını kontrol ediniz.
 
 Feature: Testing JDBC States
 

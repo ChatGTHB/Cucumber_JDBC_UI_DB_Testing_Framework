@@ -1,4 +1,5 @@
 # Scenario:
+
 # Test the Item Categories Study in the Inventory Section.
 # Make a new addition and then delete the added item.
 

@@ -1,3 +1,10 @@
+#Senaryo:
+
+#Go to the #CitizenShip page.
+#Create process with the parameter method. (Scenario 1)
+#After #Daha, verify that it is not possible to create again with the same information. (negative test) (Scenario 2)
+#Verify the deletion of the information entered in #Ayrı scenario (Scenario 3)
+
 Feature: Citizenship Functionality
 
   Background:
