@@ -1,4 +1,4 @@
-#Senaryo:
+# Scenario:
 
 #Go to the #CitizenShip page.
 #Create process with the parameter method. (Scenario 1)

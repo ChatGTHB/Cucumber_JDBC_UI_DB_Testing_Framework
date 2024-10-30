@@ -1,3 +1,5 @@
+# Scenario:
+
 # Cities menusunun kayıt, silme özelliğini test ediniz
 
 Feature: Cities Functionality Datatable
