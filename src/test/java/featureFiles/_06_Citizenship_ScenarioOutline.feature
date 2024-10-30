@@ -31,3 +31,6 @@ Feature: Citizenship Functionality
       | Australian | sh563     |
       | Norwegian  | sh564     |
       | German     | sh565     |
+
+   #  dataProvider (for TestNG), Scenario Outline (cucumber)
+   #  For each value given the # task, the entire scenario runs

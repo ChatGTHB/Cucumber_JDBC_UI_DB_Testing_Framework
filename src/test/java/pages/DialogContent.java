@@ -141,7 +141,7 @@ public class DialogContent extends Parent {
         GWD.getDriver().navigate().refresh();
         mySendKeys(searchInput, searchText);
         myClick(searchButton);
-        // wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
         // Alternative Way:
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//ms-delete-button//button"), 1));
         myClick(deleteImageButton);
