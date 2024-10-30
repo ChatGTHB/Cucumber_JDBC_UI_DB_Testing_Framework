@@ -22,7 +22,7 @@ public class _08_DataTableExample {
     @And("Write username as DataTable")
     public void writeUsernameAsDataTable(DataTable users) {
 
-        List<String> listUsers = users.asList(String.class); // list
+        List<String> listUsers = users.asList(); // list
 
         for (int i = 0; i < listUsers.size(); i++) {
             String user = listUsers.get(i);
@@ -33,7 +33,7 @@ public class _08_DataTableExample {
     @And("Write username and password as DataTable")
     public void writeUsernameAndPasswordAsDataTable(DataTable credentials) {
 
-        List<List<String>> credentialsLists = credentials.asLists(String.class);
+        List<List<String>> credentialsLists = credentials.asLists();
 
         for (int i = 0; i < credentialsLists.size(); i++) {
             List<String> credentialsList = credentialsLists.get(i);

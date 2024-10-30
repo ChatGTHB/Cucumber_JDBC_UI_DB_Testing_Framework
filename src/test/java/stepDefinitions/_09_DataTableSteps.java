@@ -15,7 +15,7 @@ public class _09_DataTableSteps {
 
     @And("Click on the element in LeftNav")
     public void clickOnTheElementInLeftNav(DataTable links) {
-        List<String> linksList = links.asList(String.class);
+        List<String> linksList = links.asList();
 
         for (int i = 0; i < linksList.size(); i++) {
             String link = linksList.get(i);
@@ -26,7 +26,7 @@ public class _09_DataTableSteps {
 
     @And("Click on the element in Dialog")
     public void clickOnTheElementInDialog(DataTable buttons) {
-        List<String> buttonsList = buttons.asList(String.class);
+        List<String> buttonsList = buttons.asList();
 
         for (int i = 0; i < buttonsList.size(); i++) {
             String button = buttonsList.get(i);
@@ -37,7 +37,7 @@ public class _09_DataTableSteps {
 
     @And("User sending the keys in Dialog")
     public void userSendingTheKeysInDialog(DataTable dataTable) {
-        List<List<String>> items = dataTable.asLists(String.class);
+        List<List<String>> items = dataTable.asLists();
 
         for (int i = 0; i < items.size(); i++) {
             WebElement webElement = dialogContent.getWebElement(items.get(i).get(0)); // 0. Web Element
@@ -47,7 +47,7 @@ public class _09_DataTableSteps {
 
     @And("User delete the element from Dialog")
     public void userDeleteTheElementFromDialog(DataTable dataTable) {
-        List<String> willBeDeleted = dataTable.asList(String.class);
+        List<String> willBeDeleted = dataTable.asList();
 
         for (int i = 0; i < willBeDeleted.size(); i++) {
             String s = willBeDeleted.get(i);
