@@ -24,6 +24,6 @@ public class _01_LoginSteps {
 
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
-        dialogContent.verifyContainsText(dialogContent.textTechnoStudy, "Internship");
+        dialogContent.loginContainsText(dialogContent.textTechnoStudy, "Internship");
     }
 }

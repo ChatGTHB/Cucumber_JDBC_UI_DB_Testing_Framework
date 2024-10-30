@@ -1,10 +1,13 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import utilities.GWD;
 
 import java.util.List;
@@ -67,6 +70,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//mat-option[@role='option'])[3]//span")
     public WebElement countryOption;
 
+    @FindBy(tagName = "mat-panel-description")
+    public WebElement messageBox;
+
     @FindBy(xpath = "//mat-form-field//input[@placeholder='Name']")
     private WebElement searchInput;
 
@@ -87,6 +93,10 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']//button")
     private WebElement toggleBar;
+
+    @FindBy(xpath = "(//ms-save-button[@class='ng-star-inserted']//button)[2]")
+    public WebElement saveClose;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -118,6 +128,13 @@ public class DialogContent extends Parent {
                 return this.countryOption;
         }
         return null;
+    }
+
+    public void verifyContainsText(String value){
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//hot-toast-container/div/div/div//*"),0));
+        Assert.assertTrue( this.messageBox.getAttribute("innerHTML").toLowerCase().contains(value.toLowerCase()));
+        // ESC key has been sent to the page, so that there is no open message
+        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
 
     public void deleteItem(String searchText) {
