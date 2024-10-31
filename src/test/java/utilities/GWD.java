@@ -6,10 +6,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.apache.logging.log4j.LogManager;
 
 import java.time.Duration;
 import java.util.Locale;
@@ -17,10 +13,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class GWD {
-    public static ThreadLocal<String> threadBrowserName = new ThreadLocal<>();
-    private static final ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
-    public static final org.apache.logging.log4j.Logger logger4j2 = LogManager.getLogger();
 
+    private static final ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
+    public static ThreadLocal<String> threadBrowserName = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
 
@@ -70,7 +65,6 @@ public class GWD {
                      */
             }
         }
-
         threadDriver.get().manage().window().maximize();
         threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         return threadDriver.get();
@@ -97,15 +91,5 @@ public class GWD {
     public static boolean isRunningOnJenkins() {
         String jenkinsHome = System.getenv("JENKINS_HOME");
         return jenkinsHome != null && !jenkinsHome.isEmpty();
-    }
-
-    @BeforeMethod
-    public void beforeMethod() {
-        logger4j2.info("Test method has started.");
-    }
-
-    @AfterMethod
-    public void afterMethod(ITestResult result) {
-        logger4j2.info(result.getName() + " test method has finished. -->" + (result.getStatus() == 1 ? "Passed" : "Failed"));
     }
 }
