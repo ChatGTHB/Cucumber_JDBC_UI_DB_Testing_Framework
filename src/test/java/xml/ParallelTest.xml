@@ -1,24 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="All Test Suite" parallel="tests" thread-count="2">
-
-    <test name="test1">
-
+    <test name="Cross Browser Test - Edge">
         <parameter name="browserType" value="edge"/>
 
         <classes>
             <class name="runners._08_TestRunnerParallel"/>
         </classes>
-
     </test>
 
-    <test name="test2">
-
+    <test name="Cross Browser Test - Firefox">
         <parameter name="browserType" value="firefox"/>
 
         <classes>
             <class name="runners._08_TestRunnerParallel"/>
         </classes>
-
     </test>
-
 </suite>

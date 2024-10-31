@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file is the pom.xml used for Maven configuration and dependency management. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!-- Project model version, specified as 4.0.0, which Maven uses -->
-    <modelVersion>4.0.0</modelVersion>
 
-    <!-- Project-specific identity details -->
-    <!-- Group ID: Typically the company or organization name, e.g., org.example -->
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <groupId>org.example</groupId>
-    <!-- Artifact ID: A unique, short name for the project -->
     <artifactId>Cucumber_JDBC_UI_DB_Testing_Framework</artifactId>
-    <!-- Project version: 1.0-SNAPSHOT indicates the project is in the development stage -->
     <version>1.0-SNAPSHOT</version>
 
-    <!-- Additional configuration settings and project properties -->
     <properties>
-        <!-- Java compiler version (Java 11) -->
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <!-- Encoding configuration for the project -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Language configuration (setting default language to English) -->
         <argLine>-Duser.language=en</argLine>
     </properties>
 
@@ -31,22 +21,14 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.18.1</version>
+            <version>4.25.0</version>
         </dependency>
 
         <!-- Cucumber library for writing feature files in Gherkin syntax (used in Java) -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.9.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- TestNG library for organizing and managing test cases -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.5.1</version>
+            <version>7.11.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -54,7 +36,15 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
-            <version>7.9.0</version>
+            <version>7.11.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- TestNG library for organizing and managing test cases -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.1</version>
             <scope>test</scope>
         </dependency>
 
@@ -62,15 +52,35 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.8.0-beta2</version>
+            <version>2.0.16</version>
         </dependency>
 
         <!-- SLF4J Simple Logger for simple, console-based logging (used during testing) -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.8.0-beta2</version>
+            <version>2.0.16</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Log4j dependencies for logging configuration -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.20.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.20.0</version>
+        </dependency>
+
+        <!-- Apache Commons IO for file handling utilities like FileUtils -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
         </dependency>
 
         <!-- Apache Commons Lang for utilities to handle core Java functionalities (e.g., String manipulation) -->
@@ -84,21 +94,21 @@
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.10.1</version>
+            <version>1.14.0</version>
         </dependency>
 
         <!-- Apache POI library for reading and writing Microsoft Office Excel files -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>4.1.1</version>
+            <version>5.2.3</version>
         </dependency>
 
         <!-- Apache POI library (OOXML version) for handling Excel files in .xlsx format -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>4.1.1</version>
+            <version>5.2.3</version>
         </dependency>
 
         <!-- MySQL JDBC driver for database connection and interaction with MySQL databases -->
