@@ -11,13 +11,11 @@ public class _08_Question_02 {
 
     public static void main(String[] args) throws IOException {
         /**
-         *  Yeni bir excel dosyasına çarpım tablosunu
-         *  alt alta yazdırınız.
-         *
-         *  -------------------------------------------------------------------
-         *
-         *  Copy the multiplication table into a new excel file
-         *  print below.
+         Yen bir excel dosyasına çarpım tablosunu
+         alt alta yazdırınız.
+         -------------------------------------------------------------------
+         Copy the multiplication table into a new excel file
+         print below.
          */
 
         XSSFWorkbook workbook = new XSSFWorkbook();

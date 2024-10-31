@@ -12,13 +12,11 @@ import java.io.IOException;
 public class _06_Question_01 {
     public static void main(String[] args) throws IOException {
         /**
-         *  Boş bir excel dosyasına çarpım tablosunu
-         *  alt alta yazdırınız.
-         *
-         *  -------------------------------------------------------------------
-         *
-         *  Copy the multiplication table into a blank excel file
-         *  print below.
+         Boş bir excel dosyasına çarpım tablosunu
+         alt alta yazdırınız.
+         -------------------------------------------------------------------
+         Copy the multiplication table into a blank excel file
+         print below.
          */
 
         String path = "src/test/java/apachePOI/resource/MultiplicationTable.xlsx";
