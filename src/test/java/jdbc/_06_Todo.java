@@ -7,11 +7,11 @@ import java.sql.SQLException;
 
 public class _06_Todo extends JDBCParent {
     /**
-     TODO: Sakila database içerisinde yer alan city tablosundan tüm satırlardaki şehir isimlerini absolute ile yazdırınız
-     TODO: Sakila database içerisinde yer alan city tablosundan tüm satırlardaki şehir isimlerini relative ile yazdırınız
-     ----------------------------------------------------------------------------------
-     TODO: Print the city names in all rows from the city table in the Sakila database with absolute.
-     TODO: Print the city names in all rows from the city table in the Sakila database with relative.
+        TODO: Sakila database içerisinde yer alan city tablosundan tüm satırlardaki şehir isimlerini absolute ile yazdırınız
+        TODO: Sakila database içerisinde yer alan city tablosundan tüm satırlardaki şehir isimlerini relative ile yazdırınız
+        ----------------------------------------------------------------------------------
+        TODO: Print the city names in all rows from the city table in the Sakila database with absolute.
+        TODO: Print the city names in all rows from the city table in the Sakila database with relative.
      */
 
     @Test
@@ -37,7 +37,7 @@ public class _06_Todo extends JDBCParent {
         int lastRowNumber = resultTable.getRow();
 
         resultTable.first();
-        int firstRowNumber= resultTable.getRow();
+        int firstRowNumber = resultTable.getRow();
 
         for (int i = 0; i < lastRowNumber; i++) {
             System.out.println("City name with relative = " + resultTable.getString("city"));
