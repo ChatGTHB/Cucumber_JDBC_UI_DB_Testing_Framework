@@ -1,6 +1,7 @@
 package jdbc;
 
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import java.sql.*;
 
@@ -11,9 +12,9 @@ public class JDBCParent {
 
     @BeforeClass
     public void dbConnectionOpen() {
-        String hostUrl="jdbc:mysql://demo.mersys.io:33906/sakila";
-        String username="admin";
-        String password="Techno24Study.%=";
+        String hostUrl = "jdbc:mysql://demo.mersys.io:33906/sakila";
+        String username = "admin";
+        String password = "Techno24Study.%=";
 
         try {
             connection = DriverManager.getConnection(hostUrl, username, password);

@@ -43,9 +43,9 @@ public class DBUtility {
 
     public static void dbConnectionOpen() {
 
-        String hostUrl="jdbc:mysql://demo.mersys.io:33906/sakila";
-        String username="admin";
-        String password="Techno24Study.%=";
+        String hostUrl = "jdbc:mysql://demo.mersys.io:33906/sakila";
+        String username = "admin";
+        String password = "Techno24Study.%=";
 
         try {
             connection = DriverManager.getConnection(hostUrl, username, password);

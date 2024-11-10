@@ -10,33 +10,33 @@ public class _01_Intro {
     public void test1() throws SQLException {
 
         // What is done to make a query work
-        String hostUrl="jdbc:mysql://demo.mersys.io:33906/sakila";
-        String username="admin";
-        String password="Techno24Study.%=";
+        String hostUrl = "jdbc:mysql://demo.mersys.io:33906/sakila";
+        String username = "admin";
+        String password = "Techno24Study.%=";
 
         // 1)- We entered the connection information --> Connection information was set.
-        Connection connection= DriverManager.getConnection(hostUrl,username,password);
+        Connection connection = DriverManager.getConnection(hostUrl, username, password);
 
         // 2)- We have chose the database --> This information was added to hostUrl (/sakila); no other additional action was taken
 
         // 3)- We opened the query screen
-        Statement statement= connection.createStatement();
+        Statement statement = connection.createStatement();
 
         // 4)- We wrote the query to query screen then I was run
-        ResultSet resultTable=statement.executeQuery("select * from customer");
+        ResultSet resultTable = statement.executeQuery("select * from customer");
 
         // 5)- The results appeared below
         resultTable.next(); // At this stage we have completed the first line
 
-        String name=resultTable.getString("first_name");   // I got the information he wanted in this line
-        String surname=resultTable.getString("last_name"); // I got the information he wanted in this line
+        String name = resultTable.getString("first_name");   // I got the information he wanted in this line
+        String surname = resultTable.getString("last_name"); // I got the information he wanted in this line
         System.out.println("name = " + name);
         System.out.println("surname = " + surname);
 
         resultTable.next(); // At this stage we have completed the second line
 
-        name=resultTable.getString("first_name");   // I got the information he wanted in this line
-        surname=resultTable.getString("last_name"); // I got the information he wanted in this line
+        name = resultTable.getString("first_name");   // I got the information he wanted in this line
+        surname = resultTable.getString("last_name"); // I got the information he wanted in this line
         System.out.println("name = " + name);
         System.out.println("surname = " + surname);
 
