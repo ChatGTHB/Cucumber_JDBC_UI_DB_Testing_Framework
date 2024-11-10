@@ -10,9 +10,9 @@ public class _01_Intro {
     public void test1() throws SQLException {
 
         // What is done to make a query work
-        String hostUrl = "jdbc:mysql://db-technostudy.ckr1jisflxpv.us-east-1.rds.amazonaws.com/sakila";
-        String username = "root";
-        String password = "'\"-LhCB'.%k[4S]z";
+        String hostUrl="jdbc:mysql://demo.mersys.io:33906/sakila";
+        String username="admin";
+        String password="Techno24Study.%=";
 
         // 1)- We entered the connection information --> Connection information was set.
         Connection connection= DriverManager.getConnection(hostUrl,username,password);
